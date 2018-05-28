@@ -1,0 +1,26 @@
+%implements s0_b0_0hcof_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign tlcForcingFunctionFcnOfS0B7 = OpaqueTLCBlockFcn("ForcingFunction", 0, 7)
+%assign tlcForcingFunctionFcnOfS0B89 = OpaqueTLCBlockFcn("ForcingFunction", 0, 89)
+%assign tlcForcingFunctionFcnOfS0B90 = OpaqueTLCBlockFcn("ForcingFunction", 0, 90)
+%assign tlcForcingFunctionFcnOfS0B91 = OpaqueTLCBlockFcn("ForcingFunction", 0, 91)
+%assign tlcForcingFunctionFcnOfS0B92 = OpaqueTLCBlockFcn("ForcingFunction", 0, 92)
+%<tlcForcingFunctionFcnOfS0B7>\
+
+/* ForcingFunction for Integrator: '<S10>/Integrator' */
+%<SLibCG_DRV(1, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(64, 0, 0, 1, "", -1, "", 0)>;
+
+/* ForcingFunction for Integrator: '<S10>/Filter' */
+%<SLibCG_DRV(2, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(27, 0, 0, 1, "", -1, "", 0)>;
+
+/* ForcingFunction for Integrator: '<S11>/Integrator' */
+%<SLibCG_DRV(3, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(65, 0, 0, 1, "", -1, "", 0)>;
+
+/* ForcingFunction for Integrator: '<S11>/Filter' */
+%<SLibCG_DRV(4, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(37, 0, 0, 1, "", -1, "", 0)>;
+%<tlcForcingFunctionFcnOfS0B89>\
+%<tlcForcingFunctionFcnOfS0B90>\
+%<tlcForcingFunctionFcnOfS0B91>\
+%<tlcForcingFunctionFcnOfS0B92>\
+%endfunction

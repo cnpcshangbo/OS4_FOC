@@ -1,0 +1,215 @@
+%implements s0_b0_0hcof_Start "C"
+
+%function Start(block, system) Output
+%assign tlcStartFcnOfS0B1 = OpaqueTLCBlockFcn("Start", 0, 1)
+%assign tlcStartFcnOfS0B2 = OpaqueTLCBlockFcn("Start", 0, 2)
+%assign tlcStartFcnOfS0B3 = OpaqueTLCBlockFcn("Start", 0, 3)
+%assign tlcStartFcnOfS0B4 = OpaqueTLCBlockFcn("Start", 0, 4)
+%assign tlcStartFcnOfS0B5 = OpaqueTLCBlockFcn("Start", 0, 5)
+%assign tlcStartFcnOfS0B6 = OpaqueTLCBlockFcn("Start", 0, 6)
+%assign tlcStartFcnOfS0B7 = OpaqueTLCBlockFcn("Start", 0, 7)
+%assign tlcStartFcnOfS0B11 = OpaqueTLCBlockFcn("Start", 0, 11)
+%assign tlcStartFcnOfS0B12 = OpaqueTLCBlockFcn("Start", 0, 12)
+%assign tlcStartFcnOfS0B13 = OpaqueTLCBlockFcn("Start", 0, 13)
+%assign tlcStartFcnOfS0B14 = OpaqueTLCBlockFcn("Start", 0, 14)
+%assign tlcStartFcnOfS0B15 = OpaqueTLCBlockFcn("Start", 0, 15)
+%assign tlcStartFcnOfS0B16 = OpaqueTLCBlockFcn("Start", 0, 16)
+%assign tlcStartFcnOfS0B17 = OpaqueTLCBlockFcn("Start", 0, 17)
+%assign tlcStartFcnOfS0B18 = OpaqueTLCBlockFcn("Start", 0, 18)
+%assign tlcStartFcnOfS0B19 = OpaqueTLCBlockFcn("Start", 0, 19)
+%assign tlcStartFcnOfS0B20 = OpaqueTLCBlockFcn("Start", 0, 20)
+%assign tlcStartFcnOfS0B21 = OpaqueTLCBlockFcn("Start", 0, 21)
+%assign tlcStartFcnOfS0B22 = OpaqueTLCBlockFcn("Start", 0, 22)
+%assign tlcStartFcnOfS0B23 = OpaqueTLCBlockFcn("Start", 0, 23)
+%assign tlcStartFcnOfS0B24 = OpaqueTLCBlockFcn("Start", 0, 24)
+%assign tlcStartFcnOfS0B25 = OpaqueTLCBlockFcn("Start", 0, 25)
+%assign tlcStartFcnOfS0B26 = OpaqueTLCBlockFcn("Start", 0, 26)
+%assign tlcStartFcnOfS0B27 = OpaqueTLCBlockFcn("Start", 0, 27)
+%assign tlcStartFcnOfS0B28 = OpaqueTLCBlockFcn("Start", 0, 28)
+%assign tlcStartFcnOfS0B29 = OpaqueTLCBlockFcn("Start", 0, 29)
+%assign tlcStartFcnOfS0B30 = OpaqueTLCBlockFcn("Start", 0, 30)
+%assign tlcStartFcnOfS0B31 = OpaqueTLCBlockFcn("Start", 0, 31)
+%assign tlcStartFcnOfS0B32 = OpaqueTLCBlockFcn("Start", 0, 32)
+%assign tlcStartFcnOfS0B33 = OpaqueTLCBlockFcn("Start", 0, 33)
+%assign tlcStartFcnOfS0B34 = OpaqueTLCBlockFcn("Start", 0, 34)
+%assign tlcStartFcnOfS0B35 = OpaqueTLCBlockFcn("Start", 0, 35)
+%assign tlcStartFcnOfS0B36 = OpaqueTLCBlockFcn("Start", 0, 36)
+%assign tlcStartFcnOfS0B37 = OpaqueTLCBlockFcn("Start", 0, 37)
+%assign tlcStartFcnOfS0B38 = OpaqueTLCBlockFcn("Start", 0, 38)
+%assign tlcStartFcnOfS0B39 = OpaqueTLCBlockFcn("Start", 0, 39)
+%assign tlcStartFcnOfS0B43 = OpaqueTLCBlockFcn("Start", 0, 43)
+%assign tlcStartFcnOfS0B44 = OpaqueTLCBlockFcn("Start", 0, 44)
+%assign tlcStartFcnOfS0B45 = OpaqueTLCBlockFcn("Start", 0, 45)
+%assign tlcStartFcnOfS0B46 = OpaqueTLCBlockFcn("Start", 0, 46)
+%assign tlcStartFcnOfS0B47 = OpaqueTLCBlockFcn("Start", 0, 47)
+%assign tlcStartFcnOfS0B48 = OpaqueTLCBlockFcn("Start", 0, 48)
+%assign tlcStartFcnOfS0B49 = OpaqueTLCBlockFcn("Start", 0, 49)
+%assign tlcStartFcnOfS0B50 = OpaqueTLCBlockFcn("Start", 0, 50)
+%assign tlcStartFcnOfS0B51 = OpaqueTLCBlockFcn("Start", 0, 51)
+%assign tlcStartFcnOfS0B52 = OpaqueTLCBlockFcn("Start", 0, 52)
+%assign tlcStartFcnOfS0B53 = OpaqueTLCBlockFcn("Start", 0, 53)
+%assign tlcStartFcnOfS0B54 = OpaqueTLCBlockFcn("Start", 0, 54)
+%assign tlcStartFcnOfS0B55 = OpaqueTLCBlockFcn("Start", 0, 55)
+%assign tlcStartFcnOfS0B56 = OpaqueTLCBlockFcn("Start", 0, 56)
+%assign tlcStartFcnOfS0B57 = OpaqueTLCBlockFcn("Start", 0, 57)
+%assign tlcStartFcnOfS0B58 = OpaqueTLCBlockFcn("Start", 0, 58)
+%assign tlcStartFcnOfS0B59 = OpaqueTLCBlockFcn("Start", 0, 59)
+%assign tlcStartFcnOfS0B60 = OpaqueTLCBlockFcn("Start", 0, 60)
+%assign tlcStartFcnOfS0B61 = OpaqueTLCBlockFcn("Start", 0, 61)
+%assign tlcStartFcnOfS0B62 = OpaqueTLCBlockFcn("Start", 0, 62)
+%assign tlcStartFcnOfS0B63 = OpaqueTLCBlockFcn("Start", 0, 63)
+%assign tlcStartFcnOfS0B64 = OpaqueTLCBlockFcn("Start", 0, 64)
+%assign tlcStartFcnOfS0B65 = OpaqueTLCBlockFcn("Start", 0, 65)
+%assign tlcStartFcnOfS0B66 = OpaqueTLCBlockFcn("Start", 0, 66)
+%assign tlcStartFcnOfS0B67 = OpaqueTLCBlockFcn("Start", 0, 67)
+%assign tlcStartFcnOfS0B68 = OpaqueTLCBlockFcn("Start", 0, 68)
+%assign tlcStartFcnOfS0B69 = OpaqueTLCBlockFcn("Start", 0, 69)
+%assign tlcStartFcnOfS0B70 = OpaqueTLCBlockFcn("Start", 0, 70)
+%assign tlcStartFcnOfS0B71 = OpaqueTLCBlockFcn("Start", 0, 71)
+%assign tlcStartFcnOfS0B72 = OpaqueTLCBlockFcn("Start", 0, 72)
+%assign tlcStartFcnOfS0B75 = OpaqueTLCBlockFcn("Start", 0, 75)
+%assign tlcStartFcnOfS0B77 = OpaqueTLCBlockFcn("Start", 0, 77)
+%assign tlcStartFcnOfS0B78 = OpaqueTLCBlockFcn("Start", 0, 78)
+%assign tlcStartFcnOfS0B79 = OpaqueTLCBlockFcn("Start", 0, 79)
+%assign tlcStartFcnOfS0B80 = OpaqueTLCBlockFcn("Start", 0, 80)
+%assign tlcStartFcnOfS0B81 = OpaqueTLCBlockFcn("Start", 0, 81)
+%assign tlcStartFcnOfS0B82 = OpaqueTLCBlockFcn("Start", 0, 82)
+%assign tlcStartFcnOfS0B83 = OpaqueTLCBlockFcn("Start", 0, 83)
+%assign tlcStartFcnOfS0B84 = OpaqueTLCBlockFcn("Start", 0, 84)
+%assign tlcStartFcnOfS0B85 = OpaqueTLCBlockFcn("Start", 0, 85)
+%assign tlcStartFcnOfS0B86 = OpaqueTLCBlockFcn("Start", 0, 86)
+%assign tlcStartFcnOfS0B87 = OpaqueTLCBlockFcn("Start", 0, 87)
+%assign tlcStartFcnOfS0B88 = OpaqueTLCBlockFcn("Start", 0, 88)
+%assign tlcStartFcnOfS0B89 = OpaqueTLCBlockFcn("Start", 0, 89)
+%assign tlcStartFcnOfS0B90 = OpaqueTLCBlockFcn("Start", 0, 90)
+%assign tlcStartFcnOfS0B91 = OpaqueTLCBlockFcn("Start", 0, 91)
+%assign tlcStartFcnOfS0B92 = OpaqueTLCBlockFcn("Start", 0, 92)
+%assign tlcStartFcnOfS0B94 = OpaqueTLCBlockFcn("Start", 0, 94)
+%assign tlcStartFcnOfS0B95 = OpaqueTLCBlockFcn("Start", 0, 95)
+%assign tlcStartFcnOfS0B96 = OpaqueTLCBlockFcn("Start", 0, 96)
+%<tlcStartFcnOfS0B1>\
+%<tlcStartFcnOfS0B2>\
+%<tlcStartFcnOfS0B3>\
+%<tlcStartFcnOfS0B4>\
+%<tlcStartFcnOfS0B5>\
+%<tlcStartFcnOfS0B6>\
+
+/* Start for Constant: '<S7>/roll [rad]' */
+%<SLibCG_SetBOV(6, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(12, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot roll [rad//s]' */
+%<SLibCG_SetBOV(7, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(13, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/pitch [rad]' */
+%<SLibCG_SetBOV(8, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(14, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot pitch [rad//s]' */
+%<SLibCG_SetBOV(9, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(15, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/yaw [rad]' */
+%<SLibCG_SetBOV(10, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(16, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot yaw [rad//s]' */
+%<SLibCG_SetBOV(11, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(17, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/z [m]3' */
+%<SLibCG_SetBOV(12, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(18, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot z  [m//s]' */
+%<SLibCG_SetBOV(13, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(19, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/x [m]' */
+%<SLibCG_SetBOV(14, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(20, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot x [m//s]' */
+%<SLibCG_SetBOV(15, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(21, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/y [m]' */
+%<SLibCG_SetBOV(16, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(22, 0, 0, 1, "", -1, "", 0)>")>\
+
+/* Start for Constant: '<S7>/dot y [m//s]' */
+%<SLibCG_SetBOV(17, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(23, 0, 0, 1, "", -1, "", 0)>")>\
+%<tlcStartFcnOfS0B7>\
+
+/* Start for RateTransition: '<S20>/Rate Transition1' */
+%<SLibCG_SetBOV(42, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(42, 0, 0, 1, "", -1, "", 0)>")>\
+%<tlcStartFcnOfS0B11>\
+%<tlcStartFcnOfS0B12>\
+%<tlcStartFcnOfS0B13>\
+%<tlcStartFcnOfS0B14>\
+%<tlcStartFcnOfS0B15>\
+%<tlcStartFcnOfS0B16>\
+%<tlcStartFcnOfS0B17>\
+%<tlcStartFcnOfS0B18>\
+%<tlcStartFcnOfS0B19>\
+%<tlcStartFcnOfS0B20>\
+%<tlcStartFcnOfS0B21>\
+%<tlcStartFcnOfS0B22>\
+%<tlcStartFcnOfS0B23>\
+%<tlcStartFcnOfS0B24>\
+%<tlcStartFcnOfS0B25>\
+%<tlcStartFcnOfS0B26>\
+%<tlcStartFcnOfS0B27>\
+%<tlcStartFcnOfS0B28>\
+%<tlcStartFcnOfS0B29>\
+%<tlcStartFcnOfS0B30>\
+%<tlcStartFcnOfS0B31>\
+%<tlcStartFcnOfS0B32>\
+%<tlcStartFcnOfS0B33>\
+%<tlcStartFcnOfS0B34>\
+%<tlcStartFcnOfS0B35>\
+%<tlcStartFcnOfS0B36>\
+%<tlcStartFcnOfS0B37>\
+%<tlcStartFcnOfS0B38>\
+%<tlcStartFcnOfS0B39>\
+%<tlcStartFcnOfS0B43>\
+%<tlcStartFcnOfS0B44>\
+%<tlcStartFcnOfS0B45>\
+%<tlcStartFcnOfS0B46>\
+%<tlcStartFcnOfS0B47>\
+%<tlcStartFcnOfS0B48>\
+%<tlcStartFcnOfS0B49>\
+%<tlcStartFcnOfS0B50>\
+%<tlcStartFcnOfS0B51>\
+%<tlcStartFcnOfS0B52>\
+%<tlcStartFcnOfS0B53>\
+%<tlcStartFcnOfS0B54>\
+%<tlcStartFcnOfS0B55>\
+%<tlcStartFcnOfS0B56>\
+%<tlcStartFcnOfS0B57>\
+%<tlcStartFcnOfS0B58>\
+%<tlcStartFcnOfS0B59>\
+%<tlcStartFcnOfS0B60>\
+%<tlcStartFcnOfS0B61>\
+%<tlcStartFcnOfS0B62>\
+%<tlcStartFcnOfS0B63>\
+%<tlcStartFcnOfS0B64>\
+%<tlcStartFcnOfS0B65>\
+%<tlcStartFcnOfS0B66>\
+%<tlcStartFcnOfS0B67>\
+%<tlcStartFcnOfS0B68>\
+%<tlcStartFcnOfS0B69>\
+%<tlcStartFcnOfS0B70>\
+%<tlcStartFcnOfS0B71>\
+%<tlcStartFcnOfS0B72>\
+%<tlcStartFcnOfS0B75>\
+%<tlcStartFcnOfS0B77>\
+%<tlcStartFcnOfS0B78>\
+%<tlcStartFcnOfS0B79>\
+%<tlcStartFcnOfS0B80>\
+%<tlcStartFcnOfS0B81>\
+%<tlcStartFcnOfS0B82>\
+%<tlcStartFcnOfS0B83>\
+%<tlcStartFcnOfS0B84>\
+%<tlcStartFcnOfS0B85>\
+%<tlcStartFcnOfS0B86>\
+%<tlcStartFcnOfS0B87>\
+%<tlcStartFcnOfS0B88>\
+%<tlcStartFcnOfS0B89>\
+%<tlcStartFcnOfS0B90>\
+%<tlcStartFcnOfS0B91>\
+%<tlcStartFcnOfS0B92>\
+%<tlcStartFcnOfS0B94>\
+%<tlcStartFcnOfS0B95>\
+%<tlcStartFcnOfS0B96>\
+%endfunction

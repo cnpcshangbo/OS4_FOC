@@ -1,0 +1,11 @@
+%% File: Additional function for 'systema' =================================
+%% Abstract:
+%%     This file contains additional functions needed by the
+%%     Real-Time Workshop generated C code. It is created by rtwgen.
+%%
+
+%function GetModelUserFcnPrototypes() void
+%return ""
+%endfunction
+
+

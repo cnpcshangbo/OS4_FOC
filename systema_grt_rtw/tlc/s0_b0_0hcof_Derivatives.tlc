@@ -1,0 +1,26 @@
+%implements s0_b0_0hcof_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign tlcDerivativesFcnOfS0B7 = OpaqueTLCBlockFcn("Derivatives", 0, 7)
+%assign tlcDerivativesFcnOfS0B89 = OpaqueTLCBlockFcn("Derivatives", 0, 89)
+%assign tlcDerivativesFcnOfS0B90 = OpaqueTLCBlockFcn("Derivatives", 0, 90)
+%assign tlcDerivativesFcnOfS0B91 = OpaqueTLCBlockFcn("Derivatives", 0, 91)
+%assign tlcDerivativesFcnOfS0B92 = OpaqueTLCBlockFcn("Derivatives", 0, 92)
+%<tlcDerivativesFcnOfS0B7>\
+
+/* Derivatives for Integrator: '<S10>/Integrator' */
+%<SLibCG_DRV(1, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(64, 0, 0, 1, "", -1, "", 0)>;
+
+/* Derivatives for Integrator: '<S10>/Filter' */
+%<SLibCG_DRV(2, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(27, 0, 0, 1, "", -1, "", 0)>;
+
+/* Derivatives for Integrator: '<S11>/Integrator' */
+%<SLibCG_DRV(3, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(65, 0, 0, 1, "", -1, "", 0)>;
+
+/* Derivatives for Integrator: '<S11>/Filter' */
+%<SLibCG_DRV(4, 0, 0, 1, -1, "", 0)> = %<SLibCG_BOV(37, 0, 0, 1, "", -1, "", 0)>;
+%<tlcDerivativesFcnOfS0B89>\
+%<tlcDerivativesFcnOfS0B90>\
+%<tlcDerivativesFcnOfS0B91>\
+%<tlcDerivativesFcnOfS0B92>\
+%endfunction

@@ -1,0 +1,41 @@
+%implements s0_b0_0hcof_Update "C"
+
+%function UpdateForTID(block, system,tid) Output
+%if tid == 0 
+%assign tlcUpdateFcnOfS0B1 = OpaqueTLCBlockFcn("Update", 0, 1)
+%assign tlcUpdateFcnOfS0B2 = OpaqueTLCBlockFcn("Update", 0, 2)
+%assign tlcUpdateFcnOfS0B3 = OpaqueTLCBlockFcn("Update", 0, 3)
+%assign tlcUpdateFcnOfS0B4 = OpaqueTLCBlockFcn("Update", 0, 4)
+%assign tlcUpdateFcnOfS0B5 = OpaqueTLCBlockFcn("Update", 0, 5)
+%assign tlcUpdateFcnOfS0B6 = OpaqueTLCBlockFcn("Update", 0, 6)
+%assign tlcUpdateFcnOfS0B7 = OpaqueTLCBlockFcn("Update", 0, 7)
+%assign tlcUpdateFcnOfS0B36 = OpaqueTLCBlockFcn("Update", 0, 36)
+%assign tlcUpdateFcnOfS0B37 = OpaqueTLCBlockFcn("Update", 0, 37)
+%assign tlcUpdateFcnOfS0B38 = OpaqueTLCBlockFcn("Update", 0, 38)
+%assign tlcUpdateFcnOfS0B39 = OpaqueTLCBlockFcn("Update", 0, 39)
+%<tlcUpdateFcnOfS0B1>\
+%<tlcUpdateFcnOfS0B2>\
+%<tlcUpdateFcnOfS0B3>\
+%<tlcUpdateFcnOfS0B4>\
+%<tlcUpdateFcnOfS0B5>\
+%<tlcUpdateFcnOfS0B6>\
+%<tlcUpdateFcnOfS0B7>\
+%<tlcUpdateFcnOfS0B36>\
+%<tlcUpdateFcnOfS0B37>\
+%<tlcUpdateFcnOfS0B38>\
+%<tlcUpdateFcnOfS0B39>\
+%endif 
+%if tid == 2 
+if(%<SLibCG_DWV(106, 0, 0, 1, "", -1, "", 0)>) {
+%<SLibCG_SetDWV(0, 0, 0, 1, "", -1, "", 0, "%<SLibCG_BOV(57, 0, 0, 1, "", -1, "", 0)>")>\
+%<SLibCGIREmptyFcn()>\
+%<SLibCG_SetDWV(106, 0, 0, 1, "", -1, "", 0, "false")>\
+%<SLibCGIREmptyFcn()>\
+} else {
+%<SLibCG_SetDWV(1, 0, 0, 1, "", -1, "", 0, "%<SLibCG_BOV(57, 0, 0, 1, "", -1, "", 0)>")>\
+%<SLibCGIREmptyFcn()>\
+%<SLibCG_SetDWV(106, 0, 0, 1, "", -1, "", 0, "true")>\
+%<SLibCGIREmptyFcn()>\
+}
+%endif 
+%endfunction

@@ -1,0 +1,30 @@
+%implements s0_b0_0hcof_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%assign tlcInitializeConditionsFcnOfS0B7 = OpaqueTLCBlockFcn("InitializeConditions", 0, 7)
+%assign tlcInitializeConditionsFcnOfS0B89 = OpaqueTLCBlockFcn("InitializeConditions", 0, 89)
+%assign tlcInitializeConditionsFcnOfS0B90 = OpaqueTLCBlockFcn("InitializeConditions", 0, 90)
+%assign tlcInitializeConditionsFcnOfS0B91 = OpaqueTLCBlockFcn("InitializeConditions", 0, 91)
+%assign tlcInitializeConditionsFcnOfS0B92 = OpaqueTLCBlockFcn("InitializeConditions", 0, 92)
+%<tlcInitializeConditionsFcnOfS0B7>\
+
+/* InitializeConditions for Integrator: '<S10>/Integrator' */
+%<SLibCG_CS(1, 0, 0, 1, -1, "", 0)> = %<SLibCGIR_PV(26, 0, 0, 1, "", -1, "", 0)>;
+
+/* InitializeConditions for Integrator: '<S10>/Filter' */
+%<SLibCG_CS(2, 0, 0, 1, -1, "", 0)> = %<SLibCGIR_PV(28, 0, 0, 1, "", -1, "", 0)>;
+
+/* InitializeConditions for Integrator: '<S11>/Integrator' */
+%<SLibCG_CS(3, 0, 0, 1, -1, "", 0)> = %<SLibCGIR_PV(34, 0, 0, 1, "", -1, "", 0)>;
+
+/* InitializeConditions for Integrator: '<S11>/Filter' */
+%<SLibCG_CS(4, 0, 0, 1, -1, "", 0)> = %<SLibCGIR_PV(36, 0, 0, 1, "", -1, "", 0)>;
+
+/* InitializeConditions for RateTransition: '<S20>/Rate Transition1' */
+%<SLibCG_SetDWV(0, 0, 0, 1, "", -1, "", 0, "%<SLibCGIR_PV(42, 0, 0, 1, "", -1, "", 0)>")>\
+%<SLibCGIREmptyFcn()>\
+%<tlcInitializeConditionsFcnOfS0B89>\
+%<tlcInitializeConditionsFcnOfS0B90>\
+%<tlcInitializeConditionsFcnOfS0B91>\
+%<tlcInitializeConditionsFcnOfS0B92>\
+%endfunction
