@@ -6,18 +6,25 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1294"
+    ComputedModelVersion    "1.1295"
     NumModelReferences	    0
-    NumTestPointedSignals   8
+    NumTestPointedSignals   9
     TestPointedSignal {
       SignalName	      "x velocity setpoint (u)"
+      FullBlockPath	      "systema/PID Controller"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
       FullBlockPath	      "systema/Step"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      "x position error (e)"
+      SignalName	      "x position estimation (e)"
       FullBlockPath	      "systema/Subsystem2"
       LogSignal		      1
       MaxPoints		      5000
@@ -151,9 +158,10 @@ Model {
   NotesPlugin		  "on"
   LogicAnalyzerGraphicalSettings ""
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "2dff3ba8-9017-47d1-a854-bbe1581afcad,1376cf80-7457-4b9a-bc0d-f89981e7c44d,85310526-9631"
-  "-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,bacc78a2-1bc4-4af5-93a7-dbab7b2cbf53,22b4dcec-2de2-4551"
-  "-8c2b-1b879a066b59,300649d1-9111-448d-912d-af5f2a47ce3c,6356761d-7bb1-489e-b09c-703983743281"
+  LogicAnalyzerSignalOrdering "300649d1-9111-448d-912d-af5f2a47ce3c,6356761d-7bb1-489e-b09c-703983743281,d48e4e35-3c97"
+  "-40cf-925c-5a9e1454e37b,18575289-90db-47a5-ad5c-692852348560,22b4dcec-2de2-4551-8c2b-1b879a066b59,bacc78a2-1bc4-4af5"
+  "-93a7-dbab7b2cbf53,1376cf80-7457-4b9a-bc0d-f89981e7c44d,2dff3ba8-9017-47d1-a854-bbe1581afcad,85310526-9631-40b7-a567"
+  "-920beaacd1b7"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -176,7 +184,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [379.0, 78.0, 1242.0, 850.0]
+      Location		      [-8.0, -8.0, 1936.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -200,9 +208,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1188.0, 670.0]
-	ZoomFactor		[4.2857142857142865]
-	Offset			[529.30283251231526, 0.8407840722495763]
+	Extents			[1882.0, 876.0]
+	ZoomFactor		[8.0]
+	Offset			[509.64449917898196, 7.4907840722496388]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -222,7 +230,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAATKAAAC1wAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAeAAAADpQAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANS/////wAAAAAAAAAA/"
@@ -236,9 +244,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 07 14:03:17 2018"
-  RTWModifiedTimeStamp	  450280633
-  ModelVersionFormat	  "1.%<AutoIncrement:1294>"
+  LastModifiedDate	  "Thu Jun 07 16:08:56 2018"
+  RTWModifiedTimeStamp	  450287655
+  ModelVersionFormat	  "1.%<AutoIncrement:1295>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -314,7 +322,7 @@ Model {
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      8
+      Dimension		      9
       MATStruct {
 	UUID			"22b4dcec-2de2-4551-8c2b-1b879a066b59"
 	BlockPath_		"Subsystem2/CONTROL/Demux"
@@ -477,6 +485,28 @@ Model {
 	OutputPortIndex_	[1.0]
 	LogicalPortIndex_	[0.0]
 	SignalName_		"x position error"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"d48e4e35-3c97-40cf-925c-5a9e1454e37b"
+	BlockPath_		"PID Controller"
+	SID_			"302"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"x velocity setpoint (u)"
 	SubSysPath_		""
 	Decimation_		[1.0]
 	MaxPoints_		[1024.0]
@@ -1512,7 +1542,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [379, 78, 1621, 928]
+    Location		    [-8, -8, 1928, 1048]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1527,15 +1557,23 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "429"
+    ZoomFactor		    "800"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "446"
+    SIDHighWatermark	    "448"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "447"
+      Position		      [370, 15, 400, 45]
+      ZOrder		      305
+      Value		      "0"
+    }
     Block {
       BlockType		      Reference
       Name		      "PID Controller"
       SID		      "302"
       Ports		      [1, 1]
-      Position		      [565, 77, 605, 113]
+      Position		      [500, 77, 540, 113]
       ZOrder		      302
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
@@ -1551,10 +1589,10 @@ Model {
       Form		      "Parallel"
       UseFilter		      on
       ControllerParametersSource "internal"
-      P			      "0.8"
-      I			      "0.2"
-      D			      "0"
-      N			      "100"
+      P			      "2.29"
+      I			      "0.547"
+      D			      "2.13"
+      N			      "0"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
       InitialConditionForFilter	"0"
@@ -1680,7 +1718,7 @@ Model {
       TunerSelectOption	      "Transfer Function Based (PID Tuner App)"
       Port {
 	PortNumber		1
-	Name			"x velocity setpoint"
+	Name			"x velocity setpoint (u)"
       }
     }
     Block {
@@ -1693,7 +1731,6 @@ Model {
       SampleTime	      "0"
       Port {
 	PortNumber		1
-	Name			"x velocity setpoint (u)"
       }
     }
     Block {
@@ -1707,11 +1744,12 @@ Model {
       ContentPreviewEnabled   on
       Port {
 	PortNumber		1
-	Name			"x position error (e)"
+	Name			"x position estimation (e)"
+	PropagatedSignals	"xpos"
       }
       System {
 	Name			"Subsystem2"
-	Location		[392, 41, 1634, 1141]
+	Location		[-8, -8, 1928, 1048]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -1726,7 +1764,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"175"
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
@@ -3804,14 +3842,6 @@ Model {
 	  SID			  "51"
 	  Position		  [495, 560, 515, 580]
 	  ZOrder		  -4
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant"
-	  SID			  "306"
-	  Position		  [945, 110, 975, 140]
-	  ZOrder		  -5
-	  Value			  "0"
 	}
 	Block {
 	  BlockType		  Constant
@@ -7793,18 +7823,6 @@ Model {
 	}
 	Block {
 	  BlockType		  Sum
-	  Name			  "Subtract"
-	  SID			  "304"
-	  Ports			  [2, 1]
-	  Position		  [1000, 137, 1030, 168]
-	  ZOrder		  -31
-	  Inputs		  "+-"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Sum
 	  Name			  "Subtract1"
 	  SID			  "305"
 	  Ports			  [2, 1]
@@ -7967,34 +7985,26 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  30
-	  SrcBlock		  "Subtract"
-	  SrcPort		  1
-	  Points		  [35, 0; 0, -80]
-	  Branch {
-	    ZOrder		    67
-	    Points		    [0, -60]
-	    DstBlock		    "Out4"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    32
-	    DstBlock		    "Scope4"
-	    DstPort		    1
-	  }
-	}
-	Line {
 	  Name			  "xpos"
 	  ZOrder		  36
 	  SrcBlock		  "Subsystem"
 	  SrcPort		  2
 	  Points		  [5, 0]
 	  Branch {
-	    ZOrder		    37
-	    Labels		    [3, 1]
-	    Points		    [20, 0; 0, -40]
-	    DstBlock		    "Subtract"
-	    DstPort		    2
+	    ZOrder		    106
+	    Labels		    [2, 1]
+	    Points		    [0, -65; 150, 0; 0, -60]
+	    Branch {
+	      ZOrder		      67
+	      Points		      [0, -60]
+	      DstBlock		      "Out4"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      32
+	      DstBlock		      "Scope4"
+	      DstPort		      1
+	    }
 	  }
 	  Branch {
 	    ZOrder		    38
@@ -8049,14 +8059,6 @@ Model {
 	    DstBlock		    "Scope1"
 	    DstPort		    1
 	  }
-	}
-	Line {
-	  ZOrder		  42
-	  SrcBlock		  "Constant"
-	  SrcPort		  1
-	  Points		  [0, 20]
-	  DstBlock		  "Subtract"
-	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  47
@@ -8211,23 +8213,49 @@ Model {
 	}
       }
     }
+    Block {
+      BlockType		      Sum
+      Name		      "Subtract"
+      SID		      "448"
+      Ports		      [2, 1]
+      Position		      [425, 77, 455, 108]
+      ZOrder		      304
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
     Line {
       Name		      "x velocity setpoint (u)"
-      ZOrder		      64
-      Labels		      [2, 1]
-      SrcBlock		      "Step"
+      ZOrder		      66
+      Labels		      [1, 0]
+      SrcBlock		      "PID Controller"
       SrcPort		      1
-      Points		      [25, 0; 0, 75]
       DstBlock		      "Subsystem2"
       DstPort		      1
     }
     Line {
-      Name		      "x position error (e)"
-      ZOrder		      63
+      Name		      "x position estimation (e)"
+      ZOrder		      72
       Labels		      [3, 1]
       SrcBlock		      "Subsystem2"
       SrcPort		      1
-      Points		      [28, 0; 0, 58; -271, 0; 0, -58]
+      Points		      [28, 0; 0, 58; -398, 0; 0, -53]
+      DstBlock		      "Subtract"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      74
+      SrcBlock		      "Step"
+      SrcPort		      1
+      Points		      [9, 0; 0, -29; -204, 0]
+      DstBlock		      "Subtract"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      73
+      SrcBlock		      "Subtract"
+      SrcPort		      1
       DstBlock		      "PID Controller"
       DstPort		      1
     }
