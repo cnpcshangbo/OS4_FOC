@@ -6,9 +6,23 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1290"
+    ComputedModelVersion    "1.1294"
     NumModelReferences	    0
-    NumTestPointedSignals   6
+    NumTestPointedSignals   8
+    TestPointedSignal {
+      SignalName	      "x velocity setpoint (u)"
+      FullBlockPath	      "systema/Step"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "x position error (e)"
+      FullBlockPath	      "systema/Subsystem2"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
     TestPointedSignal {
       SignalName	      "xpos"
       FullBlockPath	      "systema/Subsystem2/Subsystem"
@@ -137,7 +151,9 @@ Model {
   NotesPlugin		  "on"
   LogicAnalyzerGraphicalSettings ""
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering ""
+  LogicAnalyzerSignalOrdering "2dff3ba8-9017-47d1-a854-bbe1581afcad,1376cf80-7457-4b9a-bc0d-f89981e7c44d,85310526-9631"
+  "-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,bacc78a2-1bc4-4af5-93a7-dbab7b2cbf53,22b4dcec-2de2-4551"
+  "-8c2b-1b879a066b59,300649d1-9111-448d-912d-af5f2a47ce3c,6356761d-7bb1-489e-b09c-703983743281"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -160,7 +176,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [392.0, 41.0, 1242.0, 1100.0]
+      Location		      [379.0, 78.0, 1242.0, 850.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -182,11 +198,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"440"
-	Extents			[1188.0, 920.0]
-	ZoomFactor		[0.8]
-	Offset			[-140.74869791666652, -257.58333333333348]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1188.0, 670.0]
+	ZoomFactor		[4.2857142857142865]
+	Offset			[529.30283251231526, 0.8407840722495763]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -206,7 +222,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAATKAAAD0QAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAATKAAAC1wAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANS/////wAAAAAAAAAA/"
@@ -220,9 +236,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 07 13:25:53 2018"
-  RTWModifiedTimeStamp	  450278504
-  ModelVersionFormat	  "1.%<AutoIncrement:1290>"
+  LastModifiedDate	  "Thu Jun 07 14:03:17 2018"
+  RTWModifiedTimeStamp	  450280633
+  ModelVersionFormat	  "1.%<AutoIncrement:1294>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -298,7 +314,7 @@ Model {
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      6
+      Dimension		      8
       MATStruct {
 	UUID			"22b4dcec-2de2-4551-8c2b-1b879a066b59"
 	BlockPath_		"Subsystem2/CONTROL/Demux"
@@ -420,6 +436,50 @@ Model {
 	SubSysPath_		""
 	Decimation_		[1.0]
 	MaxPoints_		[0.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"1376cf80-7457-4b9a-bc0d-f89981e7c44d"
+	BlockPath_		"Step"
+	SID_			"446"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"x velocity setpoint"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"85310526-9631-40b7-a567-920beaacd1b7"
+	BlockPath_		"Subsystem2"
+	SID_			"440"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"x position error"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
 	TargetBufferedStreaming_ [0.0]
 	IsFrameBased_		[0.0]
 	DomainType_		""
@@ -1359,6 +1419,15 @@ Model {
       DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
     }
     Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -1443,8 +1512,8 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [392, 41, 1634, 1141]
-    Open		    off
+    Location		    [379, 78, 1621, 928]
+    Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
     DomainSpecType	    "Deduce"
@@ -1458,15 +1527,15 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "429"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "445"
+    SIDHighWatermark	    "446"
     Block {
       BlockType		      Reference
       Name		      "PID Controller"
       SID		      "302"
       Ports		      [1, 1]
-      Position		      [390, 77, 430, 113]
+      Position		      [565, 77, 605, 113]
       ZOrder		      302
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
@@ -1609,20 +1678,41 @@ Model {
       DivideOutMax	      "[]"
       DivideOutDataTypeStr    "Inherit: Inherit via internal rule"
       TunerSelectOption	      "Transfer Function Based (PID Tuner App)"
+      Port {
+	PortNumber		1
+	Name			"x velocity setpoint"
+      }
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step"
+      SID		      "446"
+      Position		      [570, 5, 600, 35]
+      ZOrder		      303
+      Time		      "5"
+      SampleTime	      "0"
+      Port {
+	PortNumber		1
+	Name			"x velocity setpoint (u)"
+      }
     }
     Block {
       BlockType		      SubSystem
       Name		      "Subsystem2"
       SID		      "440"
       Ports		      [1, 1]
-      Position		      [730, 94, 875, 346]
+      Position		      [660, 71, 770, 119]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
+      Port {
+	PortNumber		1
+	Name			"x position error (e)"
+      }
       System {
 	Name			"Subsystem2"
 	Location		[392, 41, 1634, 1141]
-	Open			on
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
 	DomainSpecType		"Deduce"
@@ -1953,7 +2043,7 @@ Model {
 	      Position		      [750, 47, 790, 83]
 	      ZOrder		      -13
 	      BlockMirror	      on
-	      LibraryVersion	      "1.401"
+	      LibraryVersion	      "1.441"
 	      SourceBlock	      "simulink/Continuous/PID Controller"
 	      SourceType	      "PID 1dof"
 	      SourceProductName	      "Simulink"
@@ -2103,7 +2193,7 @@ Model {
 	      Position		      [750, 107, 790, 143]
 	      ZOrder		      -14
 	      BlockMirror	      on
-	      LibraryVersion	      "1.401"
+	      LibraryVersion	      "1.441"
 	      SourceBlock	      "simulink/Continuous/PID Controller"
 	      SourceType	      "PID 1dof"
 	      SourceProductName	      "Simulink"
@@ -4523,7 +4613,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [420, 167, 435, 183]
 		  ZOrder		  -11
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4541,7 +4631,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [430, 77, 445, 93]
 		  ZOrder		  -12
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4559,7 +4649,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [420, 257, 435, 273]
 		  ZOrder		  -13
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4577,7 +4667,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [425, 122, 440, 138]
 		  ZOrder		  -14
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4595,7 +4685,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [425, 32, 440, 48]
 		  ZOrder		  -15
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4613,7 +4703,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [425, 212, 440, 228]
 		  ZOrder		  -16
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -4631,7 +4721,7 @@ Model {
 		  Ports			  [0, 1]
 		  Position		  [420, 302, 435, 318]
 		  ZOrder		  -17
-		  LibraryVersion	  "1.401"
+		  LibraryVersion	  "1.441"
 		  SourceBlock		  "simulink/Sources/Band-Limited\nWhite Noise"
 		  SourceType		  "Band-Limited White Noise."
 		  SourceProductName	  "Simulink"
@@ -8122,18 +8212,22 @@ Model {
       }
     }
     Line {
-      ZOrder		      62
-      SrcBlock		      "PID Controller"
+      Name		      "x velocity setpoint (u)"
+      ZOrder		      64
+      Labels		      [2, 1]
+      SrcBlock		      "Step"
       SrcPort		      1
-      Points		      [145, 0; 0, 125]
+      Points		      [25, 0; 0, 75]
       DstBlock		      "Subsystem2"
       DstPort		      1
     }
     Line {
+      Name		      "x position error (e)"
       ZOrder		      63
+      Labels		      [3, 1]
       SrcBlock		      "Subsystem2"
       SrcPort		      1
-      Points		      [9, 0; 0, 140; -514, 0]
+      Points		      [28, 0; 0, 58; -271, 0; 0, -58]
       DstBlock		      "PID Controller"
       DstPort		      1
     }
