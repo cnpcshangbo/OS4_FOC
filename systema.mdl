@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1296"
+    ComputedModelVersion    "1.1298"
     NumModelReferences	    0
     NumTestPointedSignals   9
     TestPointedSignal {
@@ -209,8 +209,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 876.0]
-	ZoomFactor		[1.5]
-	Offset			[168.11473727421992, -167.94373973727411]
+	ZoomFactor		[1.75]
+	Offset			[212.78140394088666, -137.848501642036]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -244,9 +244,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 09 16:02:00 2018"
-  RTWModifiedTimeStamp	  450459953
-  ModelVersionFormat	  "1.%<AutoIncrement:1296>"
+  LastModifiedDate	  "Tue Jun 12 15:16:13 2018"
+  RTWModifiedTimeStamp	  450714721
+  ModelVersionFormat	  "1.%<AutoIncrement:1298>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1557,9 +1557,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "448"
+    SIDHighWatermark	    "449"
     Block {
       BlockType		      Constant
       Name		      "Constant"
@@ -1589,9 +1589,9 @@ Model {
       Form		      "Parallel"
       UseFilter		      on
       ControllerParametersSource "internal"
-      P			      "1.11"
-      I			      "0.148"
-      D			      "1.01"
+      P			      "-iokp"
+      I			      "-ioki"
+      D			      "-iokd"
       N			      "0"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
