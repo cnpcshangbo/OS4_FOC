@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1295"
+    ComputedModelVersion    "1.1296"
     NumModelReferences	    0
     NumTestPointedSignals   9
     TestPointedSignal {
@@ -158,10 +158,10 @@ Model {
   NotesPlugin		  "on"
   LogicAnalyzerGraphicalSettings ""
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "300649d1-9111-448d-912d-af5f2a47ce3c,6356761d-7bb1-489e-b09c-703983743281,d48e4e35-3c97"
-  "-40cf-925c-5a9e1454e37b,18575289-90db-47a5-ad5c-692852348560,22b4dcec-2de2-4551-8c2b-1b879a066b59,bacc78a2-1bc4-4af5"
-  "-93a7-dbab7b2cbf53,1376cf80-7457-4b9a-bc0d-f89981e7c44d,2dff3ba8-9017-47d1-a854-bbe1581afcad,85310526-9631-40b7-a567"
-  "-920beaacd1b7"
+  LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
+  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,d48e4e35-3c97-40cf-925c-5a9e1454e37b,1376cf80-7457-4b9a"
+  "-bc0d-f89981e7c44d,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d"
+  "-af5f2a47ce3c"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -209,8 +209,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 876.0]
-	ZoomFactor		[8.0]
-	Offset			[509.64449917898196, 7.4907840722496388]
+	ZoomFactor		[1.5]
+	Offset			[168.11473727421992, -167.94373973727411]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -244,9 +244,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 07 16:08:56 2018"
-  RTWModifiedTimeStamp	  450287655
-  ModelVersionFormat	  "1.%<AutoIncrement:1295>"
+  LastModifiedDate	  "Sat Jun 09 16:02:00 2018"
+  RTWModifiedTimeStamp	  450459953
+  ModelVersionFormat	  "1.%<AutoIncrement:1296>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1557,7 +1557,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "800"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "448"
     Block {
@@ -1589,9 +1589,9 @@ Model {
       Form		      "Parallel"
       UseFilter		      on
       ControllerParametersSource "internal"
-      P			      "2.29"
-      I			      "0.547"
-      D			      "2.13"
+      P			      "1.11"
+      I			      "0.148"
+      D			      "1.01"
       N			      "0"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
@@ -1719,6 +1719,7 @@ Model {
       Port {
 	PortNumber		1
 	Name			"x velocity setpoint (u)"
+	DataLogging		on
       }
     }
     Block {
