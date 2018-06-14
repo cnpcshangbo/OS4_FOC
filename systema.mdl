@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1306"
+    ComputedModelVersion    "1.1311"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -179,9 +179,9 @@ Model {
   " \"type\" : \"wave\"\n        },\n        {\n          \"signalId\" : \"300649d1-9111-448d-912d-af5f2a47ce3c\",\n   "
   "       \"type\" : \"wave\"\n        },\n        {\n          \"signalId\" : \"9b0424c7-3b87-4cfb-903e-32d73a2226e8\""
   ",\n          \"type\" : \"wave\"\n        }\n      ],\n      \"yOffset\" : 0\n    }\n  ],\n  \"timeAxis\" : {\n    \""
-  "pixelsPerSecond\" : 52.5089605734767\n  },\n  \"trigger\" : {\n    \"enabled\" : false,\n    \"mode\" : \"once\",\n "
-  "   \"samples\" : 200,\n    \"signals\" : {\n    },\n    \"stages\" : [\n      {\n        \"conditions\" : [\n\n     "
-  "   ],\n        \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
+  "pixelsPerSecond\" : 43.95\n  },\n  \"trigger\" : {\n    \"enabled\" : false,\n    \"mode\" : \"once\",\n    \"sample"
+  "s\" : 200,\n    \"signals\" : {\n    },\n    \"stages\" : [\n      {\n        \"conditions\" : [\n\n        ],\n    "
+  "    \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
   LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
   "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,5aa4a4fa-4361-445e-9416-eaf520888258,1376cf80-7457-4b9a"
@@ -209,7 +209,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [906.0, 94.0, 917.0, 645.0]
+      Location		      [479.0, 94.0, 1344.0, 645.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -233,7 +233,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[863.0, 465.0]
+	Extents			[1290.0, 465.0]
 	ZoomFactor		[1.9261822376009228]
 	Offset			[366.12908468776726, -44.650940975192469]
       }
@@ -255,11 +255,11 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAOFAAACCgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAUwAAACCgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAMn/////wAAAAAAAAAA/"
-      "////wEAAANW/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANS/////wAAAAAAAAAA/"
+      "////wEAAAOB/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
   HideAutomaticNames	  on
@@ -269,11 +269,11 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 14 15:41:38 2018"
-  RTWModifiedTimeStamp	  450891595
-  ModelVersionFormat	  "1.%<AutoIncrement:1306>"
-  SampleTimeColors	  off
-  SampleTimeAnnotations	  off
+  LastModifiedDate	  "Thu Jun 14 16:32:28 2018"
+  RTWModifiedTimeStamp	  450894075
+  ModelVersionFormat	  "1.%<AutoIncrement:1311>"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
   WideLines		  off
   ShowLineDimensions	  on
@@ -1661,7 +1661,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [906, 94, 1823, 739]
+    Location		    [479, 94, 1823, 739]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1678,7 +1678,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "193"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "462"
+    SIDHighWatermark	    "463"
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -1958,9 +1958,9 @@ Model {
       Form		      "Parallel"
       UseFilter		      on
       ControllerParametersSource "internal"
-      P			      "-iokp"
-      I			      "-ioki"
-      D			      "-iokd"
+      P			      "1.58"
+      I			      "0.182"
+      D			      "1.49"
       N			      "0"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
@@ -2092,13 +2092,21 @@ Model {
       }
     }
     Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition"
+      SID		      "463"
+      Position		      [860, 74, 900, 116]
+      ZOrder		      313
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
       BlockType		      Step
       Name		      "Step"
       SID		      "446"
       Position		      [645, 0, 675, 30]
       ZOrder		      303
       Time		      "5"
-      SampleTime	      "0"
+      SampleTime	      "0.01"
       Port {
 	PortNumber		1
       }
@@ -2119,7 +2127,7 @@ Model {
       }
       System {
 	Name			"Subsystem2"
-	Location		[-8, -8, 1928, 1048]
+	Location		[906, 94, 1823, 739]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -8607,6 +8615,7 @@ Model {
       Position		      [480, 66, 515, 124]
       ZOrder		      311
       HideAutomaticName	      off
+      Commented		      "through"
       InputPortMap	      "u0"
       Numerator		      "[1.38183574450685,-4.65873433127261,5.91849466326920,-3.45032645121382,0.877255899520245,-0.06"
       "84747220777590]"
@@ -8619,12 +8628,11 @@ Model {
       Name		      "discrete IOPID"
       SID		      "462"
       Ports		      [1, 1]
-      Position		      [615, 79, 650, 111]
+      Position		      [625, 79, 660, 111]
       ZOrder		      312
       HideAutomaticName	      off
-      Commented		      "through"
       InputPortMap	      "u0"
-      Numerator		      "[428.292700000000,-851.994600000000,423.712700000000]"
+      Numerator		      "[299.580910000000,-595.998180000000,296.420910000000]"
       Denominator	      "[1,0,-1]"
       SampleTime	      "0.01"
     }
@@ -8640,12 +8648,11 @@ Model {
     Line {
       Name		      "x position estimation (e)"
       ZOrder		      72
-      Labels		      [3, 1]
+      Labels		      [1, 1]
       SrcBlock		      "Subsystem2"
       SrcPort		      1
-      Points		      [8, 0; 0, 58; -398, 0; 0, -53]
-      DstBlock		      "Subtract"
-      DstPort		      2
+      DstBlock		      "Rate Transition"
+      DstPort		      1
     }
     Line {
       ZOrder		      74
@@ -8684,6 +8691,14 @@ Model {
       SrcPort		      1
       DstBlock		      "IOPID"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      87
+      SrcBlock		      "Rate Transition"
+      SrcPort		      1
+      Points		      [66, 0; 0, 58; -566, 0; 0, -53]
+      DstBlock		      "Subtract"
+      DstPort		      2
     }
   }
 }
