@@ -6,9 +6,9 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1302"
+    ComputedModelVersion    "1.1306"
     NumModelReferences	    0
-    NumTestPointedSignals   10
+    NumTestPointedSignals   11
     TestPointedSignal {
       SignalName	      ""
       FullBlockPath	      "systema/FOPD"
@@ -33,6 +33,13 @@ Model {
     TestPointedSignal {
       SignalName	      "x position estimation (e)"
       FullBlockPath	      "systema/Subsystem2"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "x vel set"
+      FullBlockPath	      "systema/Subtract"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -157,9 +164,29 @@ Model {
   SuppressorTable	  "22 serialization::archive 11 0 6 0 0 0 8 0"
   Notes			  ""
   NotesPlugin		  "on"
-  LogicAnalyzerGraphicalSettings ""
+  LogicAnalyzerGraphicalSettings "{\n  \"cursors\" : {\n    \"activeCursor\" : 1,\n    \"lockedCursors\" : [\n\n    ],"
+  "\n    \"startingCursor\" : 0,\n    \"times\" : [\n      0,\n      6.537\n    ]\n  },\n  \"global\" : {\n  },\n  \"pa"
+  "nels\" : [\n    {\n      \"height\" : 100,\n      \"startingTrace\" : 0,\n      \"traces\" : [\n        {\n         "
+  " \"signalId\" : \"22b4dcec-2de2-4551-8c2b-1b879a066b59\",\n          \"type\" : \"wave\"\n        },\n        {\n   "
+  "       \"signalId\" : \"2dff3ba8-9017-47d1-a854-bbe1581afcad\",\n          \"type\" : \"wave\"\n        },\n        "
+  "{\n          \"signalId\" : \"bacc78a2-1bc4-4af5-93a7-dbab7b2cbf53\",\n          \"type\" : \"wave\"\n        },\n  "
+  "      {\n          \"signalId\" : \"6356761d-7bb1-489e-b09c-703983743281\",\n          \"type\" : \"wave\"\n        "
+  "},\n        {\n          \"signalId\" : \"5aa4a4fa-4361-445e-9416-eaf520888258\",\n          \"type\" : \"wave\"\n  "
+  "      },\n        {\n          \"signalId\" : \"1376cf80-7457-4b9a-bc0d-f89981e7c44d\",\n          \"type\" : \"wave"
+  "\"\n        },\n        {\n          \"signalId\" : \"d48e4e35-3c97-40cf-925c-5a9e1454e37b\",\n          \"type\" : "
+  "\"wave\"\n        },\n        {\n          \"signalId\" : \"85310526-9631-40b7-a567-920beaacd1b7\",\n          \"typ"
+  "e\" : \"wave\"\n        },\n        {\n          \"signalId\" : \"18575289-90db-47a5-ad5c-692852348560\",\n         "
+  " \"type\" : \"wave\"\n        },\n        {\n          \"signalId\" : \"300649d1-9111-448d-912d-af5f2a47ce3c\",\n   "
+  "       \"type\" : \"wave\"\n        },\n        {\n          \"signalId\" : \"9b0424c7-3b87-4cfb-903e-32d73a2226e8\""
+  ",\n          \"type\" : \"wave\"\n        }\n      ],\n      \"yOffset\" : 0\n    }\n  ],\n  \"timeAxis\" : {\n    \""
+  "pixelsPerSecond\" : 52.5089605734767\n  },\n  \"trigger\" : {\n    \"enabled\" : false,\n    \"mode\" : \"once\",\n "
+  "   \"samples\" : 200,\n    \"signals\" : {\n    },\n    \"stages\" : [\n      {\n        \"conditions\" : [\n\n     "
+  "   ],\n        \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering ""
+  LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
+  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,5aa4a4fa-4361-445e-9416-eaf520888258,1376cf80-7457-4b9a"
+  "-bc0d-f89981e7c44d,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c"
+  "-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c,9b0424c7-3b87-4cfb-903e-32d73a2226e8"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -242,9 +269,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 14 14:49:48 2018"
-  RTWModifiedTimeStamp	  450888583
-  ModelVersionFormat	  "1.%<AutoIncrement:1302>"
+  LastModifiedDate	  "Thu Jun 14 15:41:38 2018"
+  RTWModifiedTimeStamp	  450891595
+  ModelVersionFormat	  "1.%<AutoIncrement:1306>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -320,7 +347,7 @@ Model {
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      10
+      Dimension		      11
       MATStruct {
 	UUID			"22b4dcec-2de2-4551-8c2b-1b879a066b59"
 	BlockPath_		"Subsystem2/CONTROL/Demux"
@@ -523,6 +550,28 @@ Model {
 	UUID			"5aa4a4fa-4361-445e-9416-eaf520888258"
 	BlockPath_		"FOPD"
 	SID_			"458"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"9b0424c7-3b87-4cfb-903e-32d73a2226e8"
+	BlockPath_		"Subtract"
+	SID_			"448"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
 	LogicalPortIndex_	[0.0]
@@ -1630,14 +1679,6 @@ Model {
     ZoomFactor		    "193"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "462"
-    Block {
-      BlockType		      Constant
-      Name		      "Constant"
-      SID		      "447"
-      Position		      [370, 15, 400, 45]
-      ZOrder		      305
-      Value		      "0"
-    }
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -8553,6 +8594,10 @@ Model {
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
+      Port {
+	PortNumber		1
+	Name			"x vel set"
+      }
     }
     Block {
       BlockType		      DiscreteTransferFcn
@@ -8618,7 +8663,9 @@ Model {
       DstPort		      1
     }
     Line {
+      Name		      "x vel set"
       ZOrder		      84
+      Labels		      [1, 1]
       SrcBlock		      "Subtract"
       SrcPort		      1
       DstBlock		      "discrete FOPD"
