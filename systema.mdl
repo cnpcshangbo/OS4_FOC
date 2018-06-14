@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1301"
+    ComputedModelVersion    "1.1302"
     NumModelReferences	    0
     NumTestPointedSignals   10
     TestPointedSignal {
@@ -159,10 +159,7 @@ Model {
   NotesPlugin		  "on"
   LogicAnalyzerGraphicalSettings ""
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
-  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,d48e4e35-3c97-40cf-925c-5a9e1454e37b,1376cf80-7457-4b9a"
-  "-bc0d-f89981e7c44d,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d"
-  "-af5f2a47ce3c,5aa4a4fa-4361-445e-9416-eaf520888258"
+  LogicAnalyzerSignalOrdering ""
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -185,7 +182,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [48.0, 44.0, 917.0, 645.0]
+      Location		      [906.0, 94.0, 917.0, 645.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -245,9 +242,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 13 16:02:20 2018"
-  RTWModifiedTimeStamp	  450806527
-  ModelVersionFormat	  "1.%<AutoIncrement:1301>"
+  LastModifiedDate	  "Thu Jun 14 14:49:48 2018"
+  RTWModifiedTimeStamp	  450888583
+  ModelVersionFormat	  "1.%<AutoIncrement:1302>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1368,6 +1365,41 @@ Model {
       BusSelectionMode	      off
     }
     Block {
+      BlockType		      DiscreteTransferFcn
+      NumeratorSource	      "Dialog"
+      Numerator		      "[1]"
+      DenominatorSource	      "Dialog"
+      Denominator	      "[1 0.5]"
+      InitialStatesSource     "Dialog"
+      InitialStates	      "0"
+      InputProcessing	      "Elements as channels (sample based)"
+      ExternalReset	      "None"
+      InitialDenominatorStates "0"
+      FilterStructure	      "Direct form II"
+      SampleTime	      "-1"
+      a0EqualsOne	      off
+      NumCoefMin	      "[]"
+      NumCoefMax	      "[]"
+      DenCoefMin	      "[]"
+      DenCoefMax	      "[]"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      StateDataTypeStr	      "Inherit: Same as input"
+      MultiplicandDataTypeStr "Inherit: Same as input"
+      NumCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      DenCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      NumProductDataTypeStr   "Inherit: Inherit via internal rule"
+      DenProductDataTypeStr   "Inherit: Inherit via internal rule"
+      NumAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      DenAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
       BlockType		      Gain
       Gain		      "1"
       Multiplication	      "Element-wise(K.*u)"
@@ -1580,7 +1612,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [48, 44, 965, 689]
+    Location		    [906, 94, 1823, 739]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1597,7 +1629,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "193"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "460"
+    SIDHighWatermark	    "462"
     Block {
       BlockType		      Constant
       Name		      "Constant"
@@ -1611,8 +1643,9 @@ Model {
       Name		      "FOPD"
       SID		      "458"
       Ports		      [1, 1]
-      Position		      [470, 65, 510, 125]
+      Position		      [535, 65, 575, 125]
       ZOrder		      310
+      Commented		      "through"
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
       Port {
@@ -1621,7 +1654,7 @@ Model {
       }
       System {
 	Name			"FOPD"
-	Location		[100, 100, 900, 600]
+	Location		[906, 94, 1823, 739]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -1867,7 +1900,7 @@ Model {
       Name		      "IOPID"
       SID		      "302"
       Ports		      [1, 1]
-      Position		      [530, 77, 570, 113]
+      Position		      [675, 77, 715, 113]
       ZOrder		      302
       Commented		      "through"
       LibraryVersion	      "1.441"
@@ -2034,7 +2067,7 @@ Model {
       Name		      "Subsystem2"
       SID		      "440"
       Ports		      [1, 1]
-      Position		      [660, 71, 770, 119]
+      Position		      [755, 76, 790, 114]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
@@ -8521,10 +8554,39 @@ Model {
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
+    Block {
+      BlockType		      DiscreteTransferFcn
+      Name		      "discrete FOPD"
+      SID		      "461"
+      Ports		      [1, 1]
+      Position		      [480, 66, 515, 124]
+      ZOrder		      311
+      HideAutomaticName	      off
+      InputPortMap	      "u0"
+      Numerator		      "[1.38183574450685,-4.65873433127261,5.91849466326920,-3.45032645121382,0.877255899520245,-0.06"
+      "84747220777590]"
+      Denominator	      "[0.00924006359793744,-0.0207875447450158,0.0147933870749008,-0.00294076599412286,-0.000345393"
+      "194545685,7.28385174407053e-05]"
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      DiscreteTransferFcn
+      Name		      "discrete IOPID"
+      SID		      "462"
+      Ports		      [1, 1]
+      Position		      [615, 79, 650, 111]
+      ZOrder		      312
+      HideAutomaticName	      off
+      Commented		      "through"
+      InputPortMap	      "u0"
+      Numerator		      "[428.292700000000,-851.994600000000,423.712700000000]"
+      Denominator	      "[1,0,-1]"
+      SampleTime	      "0.01"
+    }
     Line {
       Name		      "x velocity setpoint (u)"
       ZOrder		      66
-      Labels		      [1, 0]
+      Labels		      [0, 0]
       SrcBlock		      "IOPID"
       SrcPort		      1
       DstBlock		      "Subsystem2"
@@ -8536,7 +8598,7 @@ Model {
       Labels		      [3, 1]
       SrcBlock		      "Subsystem2"
       SrcPort		      1
-      Points		      [28, 0; 0, 58; -398, 0; 0, -53]
+      Points		      [8, 0; 0, 58; -398, 0; 0, -53]
       DstBlock		      "Subtract"
       DstPort		      2
     }
@@ -8552,14 +8614,28 @@ Model {
       ZOrder		      83
       SrcBlock		      "FOPD"
       SrcPort		      1
-      DstBlock		      "IOPID"
+      DstBlock		      "discrete IOPID"
       DstPort		      1
     }
     Line {
       ZOrder		      84
       SrcBlock		      "Subtract"
       SrcPort		      1
+      DstBlock		      "discrete FOPD"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      85
+      SrcBlock		      "discrete FOPD"
+      SrcPort		      1
       DstBlock		      "FOPD"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      86
+      SrcBlock		      "discrete IOPID"
+      SrcPort		      1
+      DstBlock		      "IOPID"
       DstPort		      1
     }
   }

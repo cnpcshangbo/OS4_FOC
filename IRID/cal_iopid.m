@@ -1,7 +1,7 @@
 s=tf('s');
-kp=10.7;
-ki=15.2;
-kd=1.66;
+kp=2.29;
+ki=0.54;
+kd=2.13;
 c=kp+ki/s+kd*s;
 cd=c2d(c,0.01,'tustin');
 cd.num{1}
