@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1314"
+    ComputedModelVersion    "1.1315"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -97,7 +97,13 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 10
+    NumExternalFileReferences 11
+    ExternalFileReference {
+      Reference		      "simulink/Continuous/PID Controller"
+      Path		      "systema/IOPID"
+      SID		      "302"
+      Type		      "LIBRARY_BLOCK"
+    }
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/Subsystem2/CONTROL/PID Controller"
@@ -270,9 +276,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jun 17 15:59:18 2018"
-  RTWModifiedTimeStamp	  451151513
-  ModelVersionFormat	  "1.%<AutoIncrement:1314>"
+  LastModifiedDate	  "Sun Jun 17 16:14:07 2018"
+  RTWModifiedTimeStamp	  451152189
+  ModelVersionFormat	  "1.%<AutoIncrement:1315>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1944,7 +1950,6 @@ Model {
       Ports		      [1, 1]
       Position		      [675, 77, 715, 113]
       ZOrder		      302
-      Commented		      "through"
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -8616,6 +8621,7 @@ Model {
       Position		      [480, 66, 515, 124]
       ZOrder		      311
       HideAutomaticName	      off
+      Commented		      "through"
       InputPortMap	      "u0"
       Numerator		      "[0.946963179122833,-2.77792961698899,2.98392102212133,-1.40760552266944,0.267978964388861,-0.0"
       "129932830769816]"
