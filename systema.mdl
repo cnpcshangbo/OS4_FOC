@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1312"
+    ComputedModelVersion    "1.1314"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -97,13 +97,7 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 11
-    ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/IOPID"
-      SID		      "302"
-      Type		      "LIBRARY_BLOCK"
-    }
+    NumExternalFileReferences 10
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/Subsystem2/CONTROL/PID Controller"
@@ -216,7 +210,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [479.0, 94.0, 1344.0, 645.0]
+      Location		      [34.0, 38.0, 1344.0, 645.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -276,9 +270,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jun 17 14:34:41 2018"
-  RTWModifiedTimeStamp	  451146871
-  ModelVersionFormat	  "1.%<AutoIncrement:1312>"
+  LastModifiedDate	  "Sun Jun 17 15:59:18 2018"
+  RTWModifiedTimeStamp	  451151513
+  ModelVersionFormat	  "1.%<AutoIncrement:1314>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1668,7 +1662,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [479, 94, 1823, 739]
+    Location		    [34, 38, 1378, 683]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1950,6 +1944,7 @@ Model {
       Ports		      [1, 1]
       Position		      [675, 77, 715, 113]
       ZOrder		      302
+      Commented		      "through"
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -2122,7 +2117,7 @@ Model {
       Name		      "Subsystem2"
       SID		      "440"
       Ports		      [1, 1]
-      Position		      [755, 76, 790, 114]
+      Position		      [780, 76, 815, 114]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
@@ -2133,7 +2128,7 @@ Model {
       }
       System {
 	Name			"Subsystem2"
-	Location		[906, 94, 1823, 739]
+	Location		[34, 38, 1378, 683]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -2148,7 +2143,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"175"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
@@ -2279,7 +2274,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "CONTROL"
-	    Location		    [16, 52, 2008, 1292]
+	    Location		    [34, 38, 1378, 683]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetDomainSpec	    off
@@ -2294,7 +2289,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
@@ -8621,12 +8616,10 @@ Model {
       Position		      [480, 66, 515, 124]
       ZOrder		      311
       HideAutomaticName	      off
-      Commented		      "through"
       InputPortMap	      "u0"
-      Numerator		      "[1.38183574450685,-4.65873433127261,5.91849466326920,-3.45032645121382,0.877255899520245,-0.06"
-      "84747220777590]"
-      Denominator	      "[0.00924006359793744,-0.0207875447450158,0.0147933870749008,-0.00294076599412286,-0.000345393"
-      "194545685,7.28385174407053e-05]"
+      Numerator		      "[0.946963179122833,-2.77792961698899,2.98392102212133,-1.40760552266944,0.267978964388861,-0.0"
+      "129932830769816]"
+      Denominator	      "[1,-2.94510699389959,3.17934233429781,-1.51000556757338,0.290497513211450,-0.0143972840431492]"
       SampleTime	      "0.01"
     }
     Block {
