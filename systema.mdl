@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1315"
+    ComputedModelVersion    "1.1316"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -97,13 +97,7 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 11
-    ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/IOPID"
-      SID		      "302"
-      Type		      "LIBRARY_BLOCK"
-    }
+    NumExternalFileReferences 10
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/Subsystem2/CONTROL/PID Controller"
@@ -276,9 +270,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jun 17 16:14:07 2018"
-  RTWModifiedTimeStamp	  451152189
-  ModelVersionFormat	  "1.%<AutoIncrement:1315>"
+  LastModifiedDate	  "Mon Jun 18 14:47:15 2018"
+  RTWModifiedTimeStamp	  451232736
+  ModelVersionFormat	  "1.%<AutoIncrement:1316>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1685,7 +1679,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "193"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "463"
+    SIDHighWatermark	    "466"
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -1950,6 +1944,7 @@ Model {
       Ports		      [1, 1]
       Position		      [675, 77, 715, 113]
       ZOrder		      302
+      Commented		      "through"
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -2101,7 +2096,7 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition"
       SID		      "463"
-      Position		      [860, 74, 900, 116]
+      Position		      [945, 19, 985, 61]
       ZOrder		      313
       OutPortSampleTime	      "0.01"
     }
@@ -2112,17 +2107,28 @@ Model {
       Position		      [645, 0, 675, 30]
       ZOrder		      303
       Time		      "5"
+      After		      "0"
       SampleTime	      "0.01"
       Port {
 	PortNumber		1
       }
     }
     Block {
+      BlockType		      Step
+      Name		      "Step1"
+      SID		      "466"
+      Position		      [795, 100, 825, 130]
+      ZOrder		      315
+      Time		      "3"
+      After		      "0.2"
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "Subsystem2"
       SID		      "440"
       Ports		      [1, 1]
-      Position		      [780, 76, 815, 114]
+      Position		      [875, 21, 910, 59]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
@@ -8614,6 +8620,20 @@ Model {
       }
     }
     Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      SID		      "464"
+      Ports		      [2, 1]
+      Position		      [800, 30, 820, 50]
+      ZOrder		      314
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
       BlockType		      DiscreteTransferFcn
       Name		      "discrete FOPD"
       SID		      "461"
@@ -8621,7 +8641,6 @@ Model {
       Position		      [480, 66, 515, 124]
       ZOrder		      311
       HideAutomaticName	      off
-      Commented		      "through"
       InputPortMap	      "u0"
       Numerator		      "[0.946963179122833,-2.77792961698899,2.98392102212133,-1.40760552266944,0.267978964388861,-0.0"
       "129932830769816]"
@@ -8644,11 +8663,12 @@ Model {
     }
     Line {
       Name		      "x velocity setpoint (u)"
-      ZOrder		      66
+      ZOrder		      88
       Labels		      [0, 0]
       SrcBlock		      "IOPID"
       SrcPort		      1
-      DstBlock		      "Subsystem2"
+      Points		      [30, 0; 0, -55]
+      DstBlock		      "Sum"
       DstPort		      1
     }
     Line {
@@ -8702,8 +8722,23 @@ Model {
       ZOrder		      87
       SrcBlock		      "Rate Transition"
       SrcPort		      1
-      Points		      [66, 0; 0, 58; -566, 0; 0, -53]
+      Points		      [20, 0; 0, 113; -605, 0; 0, -53]
       DstBlock		      "Subtract"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      89
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Subsystem2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      91
+      SrcBlock		      "Step1"
+      SrcPort		      1
+      Points		      [9, 0; 0, -46; -29, 0]
+      DstBlock		      "Sum"
       DstPort		      2
     }
   }
