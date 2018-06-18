@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1311"
+    ComputedModelVersion    "1.1315"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -97,7 +97,13 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 10
+    NumExternalFileReferences 11
+    ExternalFileReference {
+      Reference		      "simulink/Continuous/PID Controller"
+      Path		      "systema/IOPID"
+      SID		      "302"
+      Type		      "LIBRARY_BLOCK"
+    }
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/Subsystem2/CONTROL/PID Controller"
@@ -184,9 +190,9 @@ Model {
   "    \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
   LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
-  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,5aa4a4fa-4361-445e-9416-eaf520888258,1376cf80-7457-4b9a"
-  "-bc0d-f89981e7c44d,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c"
-  "-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c,9b0424c7-3b87-4cfb-903e-32d73a2226e8"
+  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,9b0424c7-3b87-4cfb-903e-32d73a2226e8,5aa4a4fa-4361-445e"
+  "-9416-eaf520888258,1376cf80-7457-4b9a-bc0d-f89981e7c44d,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567"
+  "-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -199,6 +205,7 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   CloseFcn		  "rtwprivate ssgencode ModelCloseRequest systema"
+  InitFcn		  "optsiminit"
   LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
@@ -209,7 +216,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [479.0, 94.0, 1344.0, 645.0]
+      Location		      [34.0, 38.0, 1344.0, 645.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -269,9 +276,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 14 16:32:28 2018"
-  RTWModifiedTimeStamp	  450894075
-  ModelVersionFormat	  "1.%<AutoIncrement:1311>"
+  LastModifiedDate	  "Sun Jun 17 16:14:07 2018"
+  RTWModifiedTimeStamp	  451152189
+  ModelVersionFormat	  "1.%<AutoIncrement:1315>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1661,7 +1668,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [479, 94, 1823, 739]
+    Location		    [34, 38, 1378, 683]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1943,7 +1950,6 @@ Model {
       Ports		      [1, 1]
       Position		      [675, 77, 715, 113]
       ZOrder		      302
-      Commented		      "through"
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -2116,7 +2122,7 @@ Model {
       Name		      "Subsystem2"
       SID		      "440"
       Ports		      [1, 1]
-      Position		      [755, 76, 790, 114]
+      Position		      [780, 76, 815, 114]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
@@ -2127,7 +2133,7 @@ Model {
       }
       System {
 	Name			"Subsystem2"
-	Location		[906, 94, 1823, 739]
+	Location		[34, 38, 1378, 683]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -2142,7 +2148,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"175"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
@@ -2273,7 +2279,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "CONTROL"
-	    Location		    [16, 52, 2008, 1292]
+	    Location		    [34, 38, 1378, 683]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetDomainSpec	    off
@@ -2288,7 +2294,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
@@ -8617,10 +8623,9 @@ Model {
       HideAutomaticName	      off
       Commented		      "through"
       InputPortMap	      "u0"
-      Numerator		      "[1.38183574450685,-4.65873433127261,5.91849466326920,-3.45032645121382,0.877255899520245,-0.06"
-      "84747220777590]"
-      Denominator	      "[0.00924006359793744,-0.0207875447450158,0.0147933870749008,-0.00294076599412286,-0.000345393"
-      "194545685,7.28385174407053e-05]"
+      Numerator		      "[0.946963179122833,-2.77792961698899,2.98392102212133,-1.40760552266944,0.267978964388861,-0.0"
+      "129932830769816]"
+      Denominator	      "[1,-2.94510699389959,3.17934233429781,-1.51000556757338,0.290497513211450,-0.0143972840431492]"
       SampleTime	      "0.01"
     }
     Block {
@@ -8631,6 +8636,7 @@ Model {
       Position		      [625, 79, 660, 111]
       ZOrder		      312
       HideAutomaticName	      off
+      Commented		      "through"
       InputPortMap	      "u0"
       Numerator		      "[299.580910000000,-595.998180000000,296.420910000000]"
       Denominator	      "[1,0,-1]"
