@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1323"
+    ComputedModelVersion    "1.1331"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -18,7 +18,7 @@ Model {
     }
     TestPointedSignal {
       SignalName	      "x velocity setpoint (u)"
-      FullBlockPath	      "systema/IOPID"
+      FullBlockPath	      "systema/IOPI"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -97,13 +97,7 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 11
-    ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/IOPID"
-      SID		      "302"
-      Type		      "LIBRARY_BLOCK"
-    }
+    NumExternalFileReferences 10
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/Subsystem2/CONTROL/PID Controller"
@@ -190,8 +184,8 @@ Model {
   "    \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
   LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
-  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,9b0424c7-3b87-4cfb-903e-32d73a2226e8,5aa4a4fa-4361-445e"
-  "-9416-eaf520888258,1376cf80-7457-4b9a-bc0d-f89981e7c44d,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567"
+  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,1376cf80-7457-4b9a-bc0d-f89981e7c44d,9b0424c7-3b87-4cfb"
+  "-903e-32d73a2226e8,5aa4a4fa-4361-445e-9416-eaf520888258,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567"
   "-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
@@ -216,7 +210,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [527.0, 273.0, 1344.0, 645.0]
+      Location		      [529.0, 248.0, 1357.0, 770.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -240,9 +234,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1290.0, 465.0]
-	ZoomFactor		[1.9261822376009228]
-	Offset			[366.12908468776726, -44.650940975192469]
+	Extents			[1303.0, 590.0]
+	ZoomFactor		[1.7499999999999998]
+	Offset			[340.41377245508977, -63.467023096663866]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -262,7 +256,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAUwAAACCgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAU9AAAChwAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANS/////wAAAAAAAAAA/"
@@ -276,9 +270,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 18 16:38:47 2018"
-  RTWModifiedTimeStamp	  451240199
-  ModelVersionFormat	  "1.%<AutoIncrement:1323>"
+  LastModifiedDate	  "Wed Jun 20 15:45:37 2018"
+  RTWModifiedTimeStamp	  451410332
+  ModelVersionFormat	  "1.%<AutoIncrement:1331>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -533,7 +527,7 @@ Model {
       }
       MATStruct {
 	UUID			"d48e4e35-3c97-40cf-925c-5a9e1454e37b"
-	BlockPath_		"IOPID"
+	BlockPath_		"IOPI"
 	SID_			"302"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
@@ -1421,6 +1415,10 @@ Model {
       BusSelectionMode	      off
     }
     Block {
+      BlockType		      Derivative
+      CoefficientInTFapproximation "inf"
+    }
+    Block {
       BlockType		      DiscreteTransferFcn
       NumeratorSource	      "Dialog"
       Numerator		      "[1]"
@@ -1668,7 +1666,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [527, 273, 1871, 918]
+    Location		    [529, 248, 1886, 1018]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1683,9 +1681,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "193"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "467"
+    SIDHighWatermark	    "480"
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -1947,20 +1945,21 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "467"
-      Position		      [790, -20, 820, 10]
+      Position		      [790, -20, 840, 10]
       ZOrder		      316
-      Gain		      "0.5"
+      Gain		      "2"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Reference
-      Name		      "IOPID"
+      Name		      "IOPI"
       SID		      "302"
       Ports		      [1, 1]
-      Position		      [675, 77, 715, 113]
+      Position		      [730, 32, 770, 68]
       ZOrder		      302
+      Commented		      "through"
       LibraryVersion	      "1.441"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -2109,6 +2108,181 @@ Model {
       }
     }
     Block {
+      BlockType		      SubSystem
+      Name		      "PID"
+      SID		      "468"
+      Ports		      [1, 1]
+      Position		      [615, 22, 650, 78]
+      ZOrder		      317
+      Commented		      "through"
+      RequestExecContextInheritance off
+      ContentPreviewEnabled   on
+      System {
+	Name			"PID"
+	Location		[514, 148, 1871, 918]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetDomainSpec		off
+	DomainSpecType		"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"225"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "469"
+	  Position		  [20, 73, 50, 87]
+	  ZOrder		  308
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Derivative
+	  Name			  "Derivative"
+	  SID			  "470"
+	  Position		  [205, 110, 235, 140]
+	  ZOrder		  303
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "471"
+	  Position		  [160, 17, 235, 53]
+	  ZOrder		  302
+	  Gain			  "1.58"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "472"
+	  Position		  [115, 62, 170, 98]
+	  ZOrder		  305
+	  Gain			  "0.182"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  SID			  "473"
+	  Position		  [120, 110, 165, 140]
+	  ZOrder		  306
+	  Gain			  "1.49"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  SID			  "474"
+	  Ports			  [1, 1]
+	  Position		  [205, 65, 235, 95]
+	  ZOrder		  304
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "475"
+	  Ports			  [3, 1]
+	  Position		  [295, 70, 315, 90]
+	  ZOrder		  307
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "476"
+	  Position		  [380, 73, 410, 87]
+	  ZOrder		  309
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    ZOrder		    3
+	    Points		    [0, -45]
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    4
+	    Points		    [0, 45]
+	    DstBlock		    "Gain2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    5
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Derivative"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "Derivative"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
       BlockType		      RateTransition
       Name		      "Rate Transition"
       SID		      "463"
@@ -2120,7 +2294,7 @@ Model {
       BlockType		      Step
       Name		      "Step"
       SID		      "446"
-      Position		      [645, 0, 675, 30]
+      Position		      [425, -20, 455, 10]
       ZOrder		      303
       Time		      "5"
       SampleTime	      "0.01"
@@ -2135,7 +2309,7 @@ Model {
       Position		      [820, 110, 850, 140]
       ZOrder		      315
       Time		      "0"
-      After		      "0.2"
+      After		      "0"
       SampleTime	      "0"
     }
     Block {
@@ -8639,7 +8813,7 @@ Model {
       Name		      "Sum"
       SID		      "464"
       Ports		      [2, 1]
-      Position		      [790, 40, 810, 60]
+      Position		      [810, 40, 830, 60]
       ZOrder		      314
       ShowName		      off
       IconShape		      "round"
@@ -8656,7 +8830,6 @@ Model {
       Position		      [480, 66, 515, 124]
       ZOrder		      311
       HideAutomaticName	      off
-      Commented		      "through"
       InputPortMap	      "u0"
       Numerator		      "[0.946963179122833,-2.77792961698899,2.98392102212133,-1.40760552266944,0.267978964388861,-0.0"
       "129932830769816]"
@@ -8668,7 +8841,7 @@ Model {
       Name		      "discrete IOPID"
       SID		      "462"
       Ports		      [1, 1]
-      Position		      [625, 79, 660, 111]
+      Position		      [680, 34, 715, 66]
       ZOrder		      312
       HideAutomaticName	      off
       Commented		      "through"
@@ -8679,12 +8852,11 @@ Model {
     }
     Line {
       Name		      "x velocity setpoint (u)"
-      ZOrder		      94
+      ZOrder		      105
       Labels		      [0, 0]
-      SrcBlock		      "IOPID"
+      SrcBlock		      "IOPI"
       SrcPort		      1
-      Points		      [30, 0; 0, -45]
-      DstBlock		      "Sum"
+      DstBlock		      "Gain"
       DstPort		      1
     }
     Line {
@@ -8700,7 +8872,7 @@ Model {
       ZOrder		      74
       SrcBlock		      "Step"
       SrcPort		      1
-      Points		      [9, 0; 0, -24; -279, 0]
+      Points		      [9, 0; 0, -29; -59, 0]
       DstBlock		      "Subtract"
       DstPort		      1
     }
@@ -8708,7 +8880,8 @@ Model {
       ZOrder		      83
       SrcBlock		      "FOPD"
       SrcPort		      1
-      DstBlock		      "discrete IOPID"
+      Points		      [16, 0; 0, -45]
+      DstBlock		      "PID"
       DstPort		      1
     }
     Line {
@@ -8731,7 +8904,7 @@ Model {
       ZOrder		      86
       SrcBlock		      "discrete IOPID"
       SrcPort		      1
-      DstBlock		      "IOPID"
+      DstBlock		      "IOPI"
       DstPort		      1
     }
     Line {
@@ -8746,17 +8919,48 @@ Model {
       ZOrder		      91
       SrcBlock		      "Step1"
       SrcPort		      1
-      Points		      [9, 0; 0, 22; -64, 0]
+      Points		      [9, 0; 0, 22; -58, 0; 0, -43; 14, 0]
       DstBlock		      "Sum"
       DstPort		      2
     }
     Line {
-      ZOrder		      95
-      SrcBlock		      "Sum"
+      ZOrder		      106
+      SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [33, 0; 0, -10]
+      Points		      [3, 0; 0, 45]
       DstBlock		      "Subsystem2"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      104
+      SrcBlock		      "PID"
+      SrcPort		      1
+      DstBlock		      "discrete IOPID"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "480"
+      Name		      "PI controller no D"
+      Position		      [710, 88, 789, 102]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+    }
+    Annotation {
+      SID		      "478"
+      Name		      "slow"
+      Position		      [686, 12, 708, 26]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+    }
+    Annotation {
+      SID		      "477"
+      Name		      "unstable"
+      Position		      [535, 43, 574, 57]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
     }
   }
 }
