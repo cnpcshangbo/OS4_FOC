@@ -6,9 +6,16 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1353"
+    ComputedModelVersion    "1.1357"
     NumModelReferences	    0
-    NumTestPointedSignals   13
+    NumTestPointedSignals   16
+    TestPointedSignal {
+      SignalName	      "z set"
+      FullBlockPath	      "systema/Constant"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
     TestPointedSignal {
       SignalName	      ""
       FullBlockPath	      "systema/FOPD"
@@ -39,6 +46,14 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
+      SignalName	      "zpos"
+      FullBlockPath	      "systema/OS4"
+      PortIndex		      3
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
       SignalName	      ""
       FullBlockPath	      "systema/Step"
       LogSignal		      1
@@ -55,6 +70,13 @@ Model {
     TestPointedSignal {
       SignalName	      "x setpoint"
       FullBlockPath	      "systema/x setpoint"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "y set"
+      FullBlockPath	      "systema/y setpoint1"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -112,7 +134,7 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 12
+    NumExternalFileReferences 13
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "systema/OS4/CONTROL/PID Controller"
@@ -174,6 +196,12 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
+      Reference		      "simulink/Sinks/XY Graph"
+      Path		      "systema/XY Graph"
+      SID		      "489"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
       Reference		      "simulink/Sources/Repeating\nSequence"
       Path		      "systema/x setpoint"
       SID		      "481"
@@ -214,7 +242,8 @@ Model {
   "-4af5-93a7-dbab7b2cbf53,1376cf80-7457-4b9a-bc0d-f89981e7c44d,2dff3ba8-9017-47d1-a854-bbe1581afcad,d48e4e35-3c97-40cf"
   "-925c-5a9e1454e37b,6356761d-7bb1-489e-b09c-703983743281,9b0424c7-3b87-4cfb-903e-32d73a2226e8,5aa4a4fa-4361-445e-9416"
   "-eaf520888258,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f"
-  "2a47ce3c,6bff72a6-4f03-4a5c-ada5-52c3b39554ea"
+  "2a47ce3c,6bff72a6-4f03-4a5c-ada5-52c3b39554ea,d44c041f-1f3a-4f68-ad66-7b368d85092e,0d713e46-873b-4c19-a405-cb16edd28"
+  "a78,bcf10520-aa12-4ffe-9701-9d97a7247ca2"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -263,8 +292,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1014.0, 609.0]
-	ZoomFactor		[1.5]
-	Offset			[421.06648812542244, -143.80406363770217]
+	ZoomFactor		[1.2939808520320368]
+	Offset			[314.34728730969152, -234.81386862792826]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -298,9 +327,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 21 16:07:12 2018"
-  RTWModifiedTimeStamp	  451498005
-  ModelVersionFormat	  "1.%<AutoIncrement:1353>"
+  LastModifiedDate	  "Thu Jun 21 16:41:09 2018"
+  RTWModifiedTimeStamp	  451499345
+  ModelVersionFormat	  "1.%<AutoIncrement:1357>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -376,7 +405,7 @@ Model {
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      13
+      Dimension		      16
       MATStruct {
 	UUID			"22b4dcec-2de2-4551-8c2b-1b879a066b59"
 	BlockPath_		"OS4/CONTROL/Demux"
@@ -663,6 +692,72 @@ Model {
 	  PropName		  "DomainParams_"
 	}
       }
+      MATStruct {
+	UUID			"d44c041f-1f3a-4f68-ad66-7b368d85092e"
+	BlockPath_		"y setpoint1"
+	SID_			"483"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"y set"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"0d713e46-873b-4c19-a405-cb16edd28a78"
+	BlockPath_		"OS4"
+	SID_			"440"
+	SubPath_		""
+	OutputPortIndex_	[3.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"zpos"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"bcf10520-aa12-4ffe-9701-9d97a7247ca2"
+	BlockPath_		"Constant"
+	SID_			"488"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
       PropName		      "Persistence"
     }
   }
@@ -707,7 +802,7 @@ Model {
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "20"
+	  StopTime		  "25"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  "on"
 	  FixedStep		  "0.01"
@@ -1753,9 +1848,20 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "129"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "484"
+    SIDHighWatermark	    "489"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "488"
+      Position		      [355, -160, 385, -130]
+      ZOrder		      320
+      Port {
+	PortNumber		1
+	Name			"z set"
+      }
+    }
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -2182,7 +2288,7 @@ Model {
       BlockType		      SubSystem
       Name		      "OS4"
       SID		      "440"
-      Ports		      [2, 2]
+      Ports		      [3, 3]
       Position		      [875, 31, 955, 69]
       ZOrder		      301
       RequestExecContextInheritance off
@@ -2195,6 +2301,11 @@ Model {
       Port {
 	PortNumber		2
 	Name			"ypos"
+      }
+      Port {
+	PortNumber		3
+	Name			"zpos"
+	PropagatedSignals	"z est"
       }
       System {
 	Name			"OS4"
@@ -2213,7 +2324,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"200"
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
@@ -2239,6 +2350,21 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "y setpoint"
+	    PropagatedSignals	    "y set"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "485"
+	  Position		  [895, 428, 925, 442]
+	  ZOrder		  303
+	  ShowName		  off
+	  Port			  "3"
+	  IconDisplay		  "Port number and signal name"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z set"
 	  }
 	}
 	Block {
@@ -2355,15 +2481,20 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "CONTROL"
 	  SID			  "7"
-	  Ports			  [5, 1]
+	  Ports			  [5, 2]
 	  Position		  [710, 285, 770, 375]
 	  ZOrder		  -2
 	  BlockMirror		  on
 	  BackgroundColor	  "red"
 	  RequestExecContextInheritance	off
+	  Port {
+	    PortNumber		    2
+	    Name		    "z est"
+	    PropagatedSignals	    "z est"
+	  }
 	  System {
 	    Name		    "CONTROL"
-	    Location		    [34, 38, 1378, 683]
+	    Location		    [817, 101, 1885, 890]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetDomainSpec	    off
@@ -2378,7 +2509,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "60"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
@@ -2850,6 +2981,10 @@ Model {
 	      ZOrder		      -15
 	      BlockMirror	      on
 	      RequestExecContextInheritance off
+	      Port {
+		PortNumber		3
+		Name			"z est"
+	      }
 	      System {
 		Name			"RATE TRANSITION IN"
 		Location		[16, 52, 1204, 1266]
@@ -3783,6 +3918,16 @@ Model {
 	      BlockMirror	      on
 	      IconDisplay	      "Port number"
 	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "486"
+	      Position		      [805, 448, 835, 462]
+	      ZOrder		      301
+	      ShowName		      off
+	      Port		      "2"
+	      IconDisplay	      "Port number and signal name"
+	    }
 	    Line {
 	      ZOrder		      1
 	      SrcBlock		      "Mux1"
@@ -3926,11 +4071,23 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
+	      Name		      "z est"
 	      ZOrder		      24
 	      SrcBlock		      "RATE TRANSITION IN"
 	      SrcPort		      3
-	      DstBlock		      "Mux3"
-	      DstPort		      3
+	      Points		      [-57, 0]
+	      Branch {
+		ZOrder			52
+		Labels			[2, 1]
+		Points			[0, 25]
+		DstBlock		"Out2"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			51
+		DstBlock		"Mux3"
+		DstPort			3
+	      }
 	    }
 	    Line {
 	      ZOrder		      25
@@ -4315,8 +4472,9 @@ Model {
 	  BlockType		  Constant
 	  Name			  "Constant2"
 	  SID			  "439"
-	  Position		  [945, 350, 975, 380]
+	  Position		  [945, 375, 975, 405]
 	  ZOrder		  1
+	  Commented		  "on"
 	  Value			  "0"
 	}
 	Block {
@@ -8345,6 +8503,16 @@ Model {
 	  Port			  "2"
 	  IconDisplay		  "Port number and signal name"
 	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  SID			  "487"
+	  Position		  [800, 423, 830, 437]
+	  ZOrder		  304
+	  ShowName		  off
+	  Port			  "3"
+	  IconDisplay		  "Port number and signal name"
+	}
 	Line {
 	  ZOrder		  14
 	  SrcBlock		  "Demux"
@@ -8427,7 +8595,7 @@ Model {
 	  ZOrder		  15
 	  SrcBlock		  "CONTROL"
 	  SrcPort		  1
-	  Points		  [-35, 0]
+	  Points		  [-35, 0; 0, 20]
 	  Branch {
 	    ZOrder		    16
 	    DstBlock		    "MOTORS+MODULES"
@@ -8446,14 +8614,6 @@ Model {
 	  Points		  [-5, 0]
 	  DstBlock		  "CONTROL"
 	  DstPort		  5
-	}
-	Line {
-	  ZOrder		  58
-	  SrcBlock		  "Constant2"
-	  SrcPort		  1
-	  Points		  [0, -26; -105, 0]
-	  DstBlock		  "Rate Transition"
-	  DstPort		  1
 	}
 	Line {
 	  Name			  "xpos"
@@ -8687,6 +8847,26 @@ Model {
 	  SrcPort		  1
 	  Points		  [-25, 0; 0, -120]
 	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z set"
+	  ZOrder		  146
+	  Labels		  [3, 1]
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -85]
+	  DstBlock		  "Rate Transition"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z est"
+	  ZOrder		  147
+	  Labels		  [3, 0]
+	  SrcBlock		  "CONTROL"
+	  SrcPort		  2
+	  Points		  [-9, 0; 0, 75]
+	  DstBlock		  "Out2"
 	  DstPort		  1
 	}
 	Annotation {
@@ -8937,6 +9117,25 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Reference
+      Name		      "XY Graph"
+      SID		      "489"
+      Ports		      [2]
+      Position		      [1045, 25, 1075, 60]
+      ZOrder		      321
+      LibraryVersion	      "1.441"
+      SourceBlock	      "simulink/Sinks/XY Graph"
+      SourceType	      "XY scope."
+      SourceProductName	      "Simulink"
+      SourceProductBaseCode   "SL"
+      ContentPreviewEnabled   on
+      xmin		      "-0.5"
+      xmax		      "1.5"
+      ymin		      "-0.5"
+      ymax		      "1.5"
+      st		      "-0.5"
+    }
+    Block {
       BlockType		      DiscreteTransferFcn
       Name		      "discrete FOPD"
       SID		      "461"
@@ -8997,8 +9196,12 @@ Model {
       SourceProductName	      "Simulink"
       SourceProductBaseCode   "SL"
       ContentPreviewEnabled   on
-      rep_seq_t		      "[0 4.99 5 14.99 15 25]"
+      rep_seq_t		      "[0 9.99 10 19.99 20 25]"
       rep_seq_y		      "[0 0 1 1 0 0]"
+      Port {
+	PortNumber		1
+	Name			"y set"
+      }
     }
     Line {
       Name		      "x velocity setpoint (u)"
@@ -9012,12 +9215,22 @@ Model {
     Line {
       Name		      "square x (z=1, FOPD 1 gain)"
       ZOrder		      72
-      Labels		      [2, 0]
       SrcBlock		      "OS4"
       SrcPort		      1
-      Points		      [9, 0; 0, 121; -644, 0; 0, -61]
-      DstBlock		      "Rate Transition"
-      DstPort		      1
+      Points		      [9, 0]
+      Branch {
+	ZOrder			123
+	Points			[0, -5]
+	DstBlock		"XY Graph"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			122
+	Labels			[1, 0]
+	Points			[0, 121; -644, 0; 0, -61]
+	DstBlock		"Rate Transition"
+	DstPort			1
+      }
     }
     Line {
       Name		      "x setpoint"
@@ -9079,7 +9292,7 @@ Model {
       ZOrder		      106
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [15, 0]
+      Points		      [0, -10]
       DstBlock		      "OS4"
       DstPort		      1
     }
@@ -9091,20 +9304,41 @@ Model {
       DstPort		      1
     }
     Line {
+      Name		      "y set"
       ZOrder		      117
+      Labels		      [1, 1]
       SrcBlock		      "y setpoint1"
       SrcPort		      1
-      Points		      [460, 0; 0, 145]
+      Points		      [460, 0; 0, 135]
       DstBlock		      "OS4"
       DstPort		      2
     }
     Line {
       Name		      "ypos"
-      ZOrder		      118
-      Labels		      [1, 1]
+      ZOrder		      124
+      Labels		      [-1, 1]
       SrcBlock		      "OS4"
       SrcPort		      2
-      Points		      [62, 0]
+      DstBlock		      "XY Graph"
+      DstPort		      2
+    }
+    Line {
+      Name		      "zpos"
+      ZOrder		      120
+      Labels		      [1, 1]
+      SrcBlock		      "OS4"
+      SrcPort		      3
+      Points		      [41, 0]
+    }
+    Line {
+      Name		      "z set"
+      ZOrder		      121
+      Labels		      [1, 1]
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [470, 0]
+      DstBlock		      "OS4"
+      DstPort		      3
     }
     Annotation {
       SID		      "480"
