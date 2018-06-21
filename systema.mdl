@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1331"
+    ComputedModelVersion    "1.1344"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -31,7 +31,7 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      "x position estimation (e)"
+      SignalName	      "x (FOPD 1.3 gain)"
       FullBlockPath	      "systema/Subsystem2"
       LogSignal		      1
       MaxPoints		      5000
@@ -210,7 +210,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [529.0, 248.0, 1357.0, 770.0]
+      Location		      [528.0, 120.0, 1357.0, 770.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -235,8 +235,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1303.0, 590.0]
-	ZoomFactor		[1.7499999999999998]
-	Offset			[340.41377245508977, -63.467023096663866]
+	ZoomFactor		[1.5]
+	Offset			[278.79472483604223, -76.228927858568611]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -270,9 +270,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 20 15:45:37 2018"
-  RTWModifiedTimeStamp	  451410332
-  ModelVersionFormat	  "1.%<AutoIncrement:1331>"
+  LastModifiedDate	  "Thu Jun 21 14:22:54 2018"
+  RTWModifiedTimeStamp	  451491764
+  ModelVersionFormat	  "1.%<AutoIncrement:1344>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1666,7 +1666,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [529, 248, 1886, 1018]
+    Location		    [528, 120, 1885, 890]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1681,7 +1681,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "175"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "480"
     Block {
@@ -1945,9 +1945,9 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "467"
-      Position		      [790, -20, 840, 10]
+      Position		      [790, 35, 840, 65]
       ZOrder		      316
-      Gain		      "2"
+      Gain		      "1.3"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -2286,7 +2286,7 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition"
       SID		      "463"
-      Position		      [945, 19, 985, 61]
+      Position		      [350, 79, 390, 121]
       ZOrder		      313
       OutPortSampleTime	      "0.01"
     }
@@ -2294,7 +2294,7 @@ Model {
       BlockType		      Step
       Name		      "Step"
       SID		      "446"
-      Position		      [425, -20, 455, 10]
+      Position		      [355, 20, 385, 50]
       ZOrder		      303
       Time		      "5"
       SampleTime	      "0.01"
@@ -2323,7 +2323,7 @@ Model {
       ContentPreviewEnabled   on
       Port {
 	PortNumber		1
-	Name			"x position estimation (e)"
+	Name			"x (FOPD 1.3 gain)"
 	PropagatedSignals	"xpos"
       }
       System {
@@ -8813,7 +8813,7 @@ Model {
       Name		      "Sum"
       SID		      "464"
       Ports		      [2, 1]
-      Position		      [810, 40, 830, 60]
+      Position		      [795, 85, 815, 105]
       ZOrder		      314
       ShowName		      off
       IconShape		      "round"
@@ -8860,11 +8860,12 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "x position estimation (e)"
+      Name		      "x (FOPD 1.3 gain)"
       ZOrder		      72
-      Labels		      [1, 1]
+      Labels		      [2, 0]
       SrcBlock		      "Subsystem2"
       SrcPort		      1
+      Points		      [9, 0; 0, 121; -599, 0; 0, -61]
       DstBlock		      "Rate Transition"
       DstPort		      1
     }
@@ -8872,7 +8873,7 @@ Model {
       ZOrder		      74
       SrcBlock		      "Step"
       SrcPort		      1
-      Points		      [9, 0; 0, -29; -59, 0]
+      Points		      [20, 0]
       DstBlock		      "Subtract"
       DstPort		      1
     }
@@ -8911,7 +8912,6 @@ Model {
       ZOrder		      87
       SrcBlock		      "Rate Transition"
       SrcPort		      1
-      Points		      [20, 0; 0, 113; -605, 0; 0, -53]
       DstBlock		      "Subtract"
       DstPort		      2
     }
@@ -8919,7 +8919,7 @@ Model {
       ZOrder		      91
       SrcBlock		      "Step1"
       SrcPort		      1
-      Points		      [9, 0; 0, 22; -58, 0; 0, -43; 14, 0]
+      Points		      [9, 0; 0, 22; -59, 0]
       DstBlock		      "Sum"
       DstPort		      2
     }
@@ -8927,7 +8927,7 @@ Model {
       ZOrder		      106
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [3, 0; 0, 45]
+      Points		      [13, 0; 0, -10]
       DstBlock		      "Subsystem2"
       DstPort		      1
     }
@@ -8945,6 +8945,7 @@ Model {
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
+      ZOrder		      -1
     }
     Annotation {
       SID		      "478"
@@ -8953,6 +8954,7 @@ Model {
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
+      ZOrder		      -2
     }
     Annotation {
       SID		      "477"
@@ -8961,6 +8963,7 @@ Model {
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
+      ZOrder		      -3
     }
   }
 }
