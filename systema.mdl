@@ -6,9 +6,9 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1344"
+    ComputedModelVersion    "1.1353"
     NumModelReferences	    0
-    NumTestPointedSignals   11
+    NumTestPointedSignals   13
     TestPointedSignal {
       SignalName	      ""
       FullBlockPath	      "systema/FOPD"
@@ -24,15 +24,23 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      ""
-      FullBlockPath	      "systema/Step"
+      SignalName	      "square x (z=1, FOPD 1 gain)"
+      FullBlockPath	      "systema/OS4"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      "x (FOPD 1.3 gain)"
-      FullBlockPath	      "systema/Subsystem2"
+      SignalName	      "ypos"
+      FullBlockPath	      "systema/OS4"
+      PortIndex		      2
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "systema/Step"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -45,8 +53,15 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
+      SignalName	      "x setpoint"
+      FullBlockPath	      "systema/x setpoint"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
       SignalName	      "xpos"
-      FullBlockPath	      "systema/Subsystem2/Subsystem"
+      FullBlockPath	      "systema/OS4/Subsystem"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -54,7 +69,7 @@ Model {
     }
     TestPointedSignal {
       SignalName	      "ypos"
-      FullBlockPath	      "systema/Subsystem2/Subsystem"
+      FullBlockPath	      "systema/OS4/Subsystem"
       PortIndex		      3
       LogSignal		      1
       MaxPoints		      5000
@@ -62,14 +77,14 @@ Model {
     }
     TestPointedSignal {
       SignalName	      "roll"
-      FullBlockPath	      "systema/Subsystem2/CONTROL/Demux"
+      FullBlockPath	      "systema/OS4/CONTROL/Demux"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "pitch"
-      FullBlockPath	      "systema/Subsystem2/CONTROL/Demux"
+      FullBlockPath	      "systema/OS4/CONTROL/Demux"
       PortIndex		      3
       LogSignal		      1
       MaxPoints		      5000
@@ -77,14 +92,14 @@ Model {
     }
     TestPointedSignal {
       SignalName	      "rolld"
-      FullBlockPath	      "systema/Subsystem2/CONTROL/Demux1"
+      FullBlockPath	      "systema/OS4/CONTROL/Demux1"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "pitchd"
-      FullBlockPath	      "systema/Subsystem2/CONTROL/Demux1"
+      FullBlockPath	      "systema/OS4/CONTROL/Demux1"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -97,65 +112,77 @@ Model {
     HasTerminateEvent	    0
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 10
+    NumExternalFileReferences 12
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/Subsystem2/CONTROL/PID Controller"
+      Path		      "systema/OS4/CONTROL/PID Controller"
       SID		      "377"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/Subsystem2/CONTROL/PID Controller1"
+      Path		      "systema/OS4/CONTROL/PID Controller1"
       SID		      "378"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot pitchw noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot pitchw noise"
       SID		      "270"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot roll w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot roll w noise"
       SID		      "271"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot yaw w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/dot yaw w noise"
       SID		      "272"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/pitch w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/pitch w noise"
       SID		      "273"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/roll w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/roll w noise"
       SID		      "274"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/yaw w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/yaw w noise"
       SID		      "275"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "systema/Subsystem2/DELAY - NOISE - FILTER/W. NORMAL NOISE1/z w noise"
+      Path		      "systema/OS4/DELAY - NOISE - FILTER/W. NORMAL NOISE1/z w noise"
       SID		      "276"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
-      Path		      "systema/Subsystem2/PID Controller1"
+      Path		      "systema/OS4/PID Controller1"
       SID		      "303"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink/Sources/Repeating\nSequence"
+      Path		      "systema/x setpoint"
+      SID		      "481"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink/Sources/Repeating\nSequence"
+      Path		      "systema/y setpoint1"
+      SID		      "483"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -183,10 +210,11 @@ Model {
   "s\" : 200,\n    \"signals\" : {\n    },\n    \"stages\" : [\n      {\n        \"conditions\" : [\n\n        ],\n    "
   "    \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
-  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,1376cf80-7457-4b9a-bc0d-f89981e7c44d,9b0424c7-3b87-4cfb"
-  "-903e-32d73a2226e8,5aa4a4fa-4361-445e-9416-eaf520888258,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567"
-  "-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c"
+  LogicAnalyzerSignalOrdering "bcce8631-31ab-4aa1-b4b0-4d98d677fc22,22b4dcec-2de2-4551-8c2b-1b879a066b59,bacc78a2-1bc4"
+  "-4af5-93a7-dbab7b2cbf53,1376cf80-7457-4b9a-bc0d-f89981e7c44d,2dff3ba8-9017-47d1-a854-bbe1581afcad,d48e4e35-3c97-40cf"
+  "-925c-5a9e1454e37b,6356761d-7bb1-489e-b09c-703983743281,9b0424c7-3b87-4cfb-903e-32d73a2226e8,5aa4a4fa-4361-445e-9416"
+  "-eaf520888258,85310526-9631-40b7-a567-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f"
+  "2a47ce3c,6bff72a6-4f03-4a5c-ada5-52c3b39554ea"
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -210,7 +238,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [528.0, 120.0, 1357.0, 770.0]
+      Location		      [817.0, 101.0, 1068.0, 789.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -234,9 +262,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1303.0, 590.0]
+	Extents			[1014.0, 609.0]
 	ZoomFactor		[1.5]
-	Offset			[278.79472483604223, -76.228927858568611]
+	Offset			[421.06648812542244, -143.80406363770217]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -256,7 +284,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAU9AAAChwAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAQcAAACmgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANS/////wAAAAAAAAAA/"
@@ -270,9 +298,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 21 14:22:54 2018"
-  RTWModifiedTimeStamp	  451491764
-  ModelVersionFormat	  "1.%<AutoIncrement:1344>"
+  LastModifiedDate	  "Thu Jun 21 16:07:12 2018"
+  RTWModifiedTimeStamp	  451498005
+  ModelVersionFormat	  "1.%<AutoIncrement:1353>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -348,10 +376,10 @@ Model {
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      11
+      Dimension		      13
       MATStruct {
 	UUID			"22b4dcec-2de2-4551-8c2b-1b879a066b59"
-	BlockPath_		"Subsystem2/CONTROL/Demux"
+	BlockPath_		"OS4/CONTROL/Demux"
 	SID_			"423"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
@@ -373,7 +401,7 @@ Model {
       }
       MATStruct {
 	UUID			"2dff3ba8-9017-47d1-a854-bbe1581afcad"
-	BlockPath_		"Subsystem2/CONTROL/Demux"
+	BlockPath_		"OS4/CONTROL/Demux"
 	SID_			"423"
 	SubPath_		""
 	OutputPortIndex_	[3.0]
@@ -395,7 +423,7 @@ Model {
       }
       MATStruct {
 	UUID			"bacc78a2-1bc4-4af5-93a7-dbab7b2cbf53"
-	BlockPath_		"Subsystem2/CONTROL/Demux1"
+	BlockPath_		"OS4/CONTROL/Demux1"
 	SID_			"424"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
@@ -417,7 +445,7 @@ Model {
       }
       MATStruct {
 	UUID			"6356761d-7bb1-489e-b09c-703983743281"
-	BlockPath_		"Subsystem2/CONTROL/Demux1"
+	BlockPath_		"OS4/CONTROL/Demux1"
 	SID_			"424"
 	SubPath_		""
 	OutputPortIndex_	[2.0]
@@ -439,7 +467,7 @@ Model {
       }
       MATStruct {
 	UUID			"18575289-90db-47a5-ad5c-692852348560"
-	BlockPath_		"Subsystem2/Subsystem"
+	BlockPath_		"OS4/Subsystem"
 	SID_			"297"
 	SubPath_		""
 	OutputPortIndex_	[2.0]
@@ -461,7 +489,7 @@ Model {
       }
       MATStruct {
 	UUID			"300649d1-9111-448d-912d-af5f2a47ce3c"
-	BlockPath_		"Subsystem2/Subsystem"
+	BlockPath_		"OS4/Subsystem"
 	SID_			"297"
 	SubPath_		""
 	OutputPortIndex_	[3.0]
@@ -505,7 +533,7 @@ Model {
       }
       MATStruct {
 	UUID			"85310526-9631-40b7-a567-920beaacd1b7"
-	BlockPath_		"Subsystem2"
+	BlockPath_		"OS4"
 	SID_			"440"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
@@ -577,6 +605,50 @@ Model {
 	OutputPortIndex_	[1.0]
 	LogicalPortIndex_	[0.0]
 	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"bcce8631-31ab-4aa1-b4b0-4d98d677fc22"
+	BlockPath_		"x setpoint"
+	SID_			"481"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"x setpoint"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      MATStruct {
+	UUID			"6bff72a6-4f03-4a5c-ada5-52c3b39554ea"
+	BlockPath_		"OS4"
+	SID_			"440"
+	SubPath_		""
+	OutputPortIndex_	[2.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"ypos"
 	SubSysPath_		""
 	Decimation_		[1.0]
 	MaxPoints_		[1024.0]
@@ -1666,7 +1738,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [528, 120, 1885, 890]
+    Location		    [817, 101, 1885, 890]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1683,7 +1755,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "480"
+    SIDHighWatermark	    "484"
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -1947,7 +2019,6 @@ Model {
       SID		      "467"
       Position		      [790, 35, 840, 65]
       ZOrder		      316
-      Gain		      "1.3"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -2109,226 +2180,25 @@ Model {
     }
     Block {
       BlockType		      SubSystem
-      Name		      "PID"
-      SID		      "468"
-      Ports		      [1, 1]
-      Position		      [615, 22, 650, 78]
-      ZOrder		      317
-      Commented		      "through"
-      RequestExecContextInheritance off
-      ContentPreviewEnabled   on
-      System {
-	Name			"PID"
-	Location		[514, 148, 1871, 918]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetDomainSpec		off
-	DomainSpecType		"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"225"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  "469"
-	  Position		  [20, 73, 50, 87]
-	  ZOrder		  308
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Derivative
-	  Name			  "Derivative"
-	  SID			  "470"
-	  Position		  [205, 110, 235, 140]
-	  ZOrder		  303
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "Gain"
-	  SID			  "471"
-	  Position		  [160, 17, 235, 53]
-	  ZOrder		  302
-	  Gain			  "1.58"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "Gain1"
-	  SID			  "472"
-	  Position		  [115, 62, 170, 98]
-	  ZOrder		  305
-	  Gain			  "0.182"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "Gain2"
-	  SID			  "473"
-	  Position		  [120, 110, 165, 140]
-	  ZOrder		  306
-	  Gain			  "1.49"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Integrator
-	  Name			  "Integrator2"
-	  SID			  "474"
-	  Ports			  [1, 1]
-	  Position		  [205, 65, 235, 95]
-	  ZOrder		  304
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum2"
-	  SID			  "475"
-	  Ports			  [3, 1]
-	  Position		  [295, 70, 315, 90]
-	  ZOrder		  307
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "+++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  "476"
-	  Position		  [380, 73, 410, 87]
-	  ZOrder		  309
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "Gain1"
-	  SrcPort		  1
-	  DstBlock		  "Integrator2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  2
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  Points		  [40, 0]
-	  Branch {
-	    ZOrder		    3
-	    Points		    [0, -45]
-	    DstBlock		    "Gain"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    4
-	    Points		    [0, 45]
-	    DstBlock		    "Gain2"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    5
-	    DstBlock		    "Gain1"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  6
-	  SrcBlock		  "Gain2"
-	  SrcPort		  1
-	  DstBlock		  "Derivative"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  7
-	  SrcBlock		  "Gain"
-	  SrcPort		  1
-	  Points		  [65, 0]
-	  DstBlock		  "Sum2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  8
-	  SrcBlock		  "Integrator2"
-	  SrcPort		  1
-	  DstBlock		  "Sum2"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  9
-	  SrcBlock		  "Derivative"
-	  SrcPort		  1
-	  Points		  [65, 0]
-	  DstBlock		  "Sum2"
-	  DstPort		  3
-	}
-	Line {
-	  ZOrder		  10
-	  SrcBlock		  "Sum2"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
-      BlockType		      RateTransition
-      Name		      "Rate Transition"
-      SID		      "463"
-      Position		      [350, 79, 390, 121]
-      ZOrder		      313
-      OutPortSampleTime	      "0.01"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Step"
-      SID		      "446"
-      Position		      [355, 20, 385, 50]
-      ZOrder		      303
-      Time		      "5"
-      SampleTime	      "0.01"
-      Port {
-	PortNumber		1
-      }
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Step1"
-      SID		      "466"
-      Position		      [820, 110, 850, 140]
-      ZOrder		      315
-      Time		      "0"
-      After		      "0"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Subsystem2"
+      Name		      "OS4"
       SID		      "440"
-      Ports		      [1, 1]
-      Position		      [875, 21, 910, 59]
+      Ports		      [2, 2]
+      Position		      [875, 31, 955, 69]
       ZOrder		      301
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
       Port {
 	PortNumber		1
-	Name			"x (FOPD 1.3 gain)"
+	Name			"square x (z=1, FOPD 1 gain)"
 	PropagatedSignals	"xpos"
       }
+      Port {
+	PortNumber		2
+	Name			"ypos"
+      }
       System {
-	Name			"Subsystem2"
-	Location		[34, 38, 1378, 683]
+	Name			"OS4"
+	Location		[817, 101, 1885, 890]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -2348,9 +2218,28 @@ Model {
 	  BlockType		  Inport
 	  Name			  "In1"
 	  SID			  "444"
-	  Position		  [1105, 148, 1135, 162]
+	  Position		  [1065, 148, 1095, 162]
 	  ZOrder		  5
-	  IconDisplay		  "Port number"
+	  ShowName		  off
+	  IconDisplay		  "Port number and signal name"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vx setpoint"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Input"
+	  SID			  "482"
+	  Position		  [945, 178, 975, 192]
+	  ZOrder		  301
+	  ShowName		  off
+	  Port			  "2"
+	  IconDisplay		  "Port number and signal name"
+	  Port {
+	    PortNumber		    1
+	    Name		    "y setpoint"
+	  }
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -4421,14 +4310,6 @@ Model {
 	  SID			  "51"
 	  Position		  [495, 560, 515, 580]
 	  ZOrder		  -4
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant1"
-	  SID			  "307"
-	  Position		  [945, 170, 975, 200]
-	  ZOrder		  -6
-	  Value			  "0"
 	}
 	Block {
 	  BlockType		  Constant
@@ -8449,9 +8330,20 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Out4"
 	  SID			  "445"
-	  Position		  [1090, 8, 1120, 22]
+	  Position		  [1090, -2, 1180, 22]
 	  ZOrder		  6
-	  IconDisplay		  "Port number"
+	  ShowName		  off
+	  IconDisplay		  "Port number and signal name"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "484"
+	  Position		  [990, 238, 1020, 252]
+	  ZOrder		  302
+	  ShowName		  off
+	  Port			  "2"
+	  IconDisplay		  "Port number and signal name"
 	}
 	Line {
 	  ZOrder		  14
@@ -8575,7 +8467,7 @@ Model {
 	    Points		    [0, -65; 150, 0; 0, -60]
 	    Branch {
 	      ZOrder		      67
-	      Points		      [0, -60]
+	      Points		      [0, -65]
 	      DstBlock		      "Out4"
 	      DstPort		      1
 	    }
@@ -8683,8 +8575,10 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  43
-	  SrcBlock		  "Constant1"
+	  Name			  "y setpoint"
+	  ZOrder		  142
+	  Labels		  [2, 1]
+	  SrcBlock		  "Input"
 	  SrcPort		  1
 	  Points		  [10, 0; 0, 20]
 	  DstBlock		  "Subtract1"
@@ -8719,9 +8613,19 @@ Model {
 	  Points		  [35, 0]
 	  Branch {
 	    ZOrder		    40
-	    Labels		    [1, 1]
-	    DstBlock		    "Subtract1"
-	    DstPort		    2
+	    Points		    [10, 0]
+	    Branch {
+	      ZOrder		      144
+	      Points		      [0, 25]
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      143
+	      Labels		      [1, 1]
+	      DstBlock		      "Subtract1"
+	      DstPort		      2
+	    }
 	  }
 	  Branch {
 	    ZOrder		    41
@@ -8737,7 +8641,9 @@ Model {
 	  DstPort		  1
 	}
 	Line {
+	  Name			  "vx setpoint"
 	  ZOrder		  69
+	  Labels		  [1, 1]
 	  SrcBlock		  "In1"
 	  SrcPort		  1
 	  DstBlock		  "Saturation"
@@ -8793,6 +8699,213 @@ Model {
       }
     }
     Block {
+      BlockType		      SubSystem
+      Name		      "PID"
+      SID		      "468"
+      Ports		      [1, 1]
+      Position		      [615, 22, 650, 78]
+      ZOrder		      317
+      Commented		      "through"
+      RequestExecContextInheritance off
+      ContentPreviewEnabled   on
+      System {
+	Name			"PID"
+	Location		[514, 148, 1871, 918]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetDomainSpec		off
+	DomainSpecType		"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"225"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "469"
+	  Position		  [20, 73, 50, 87]
+	  ZOrder		  308
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Derivative
+	  Name			  "Derivative"
+	  SID			  "470"
+	  Position		  [205, 110, 235, 140]
+	  ZOrder		  303
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "471"
+	  Position		  [160, 17, 235, 53]
+	  ZOrder		  302
+	  Gain			  "1.58"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "472"
+	  Position		  [115, 62, 170, 98]
+	  ZOrder		  305
+	  Gain			  "0.182"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  SID			  "473"
+	  Position		  [120, 110, 165, 140]
+	  ZOrder		  306
+	  Gain			  "1.49"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  SID			  "474"
+	  Ports			  [1, 1]
+	  Position		  [205, 65, 235, 95]
+	  ZOrder		  304
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "475"
+	  Ports			  [3, 1]
+	  Position		  [295, 70, 315, 90]
+	  ZOrder		  307
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "476"
+	  Position		  [380, 73, 410, 87]
+	  ZOrder		  309
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    ZOrder		    3
+	    Points		    [0, -45]
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    4
+	    Points		    [0, 45]
+	    DstBlock		    "Gain2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    5
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Derivative"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "Derivative"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition"
+      SID		      "463"
+      Position		      [350, 79, 390, 121]
+      ZOrder		      313
+      OutPortSampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step"
+      SID		      "446"
+      Position		      [355, 20, 385, 50]
+      ZOrder		      303
+      Commented		      "on"
+      Time		      "5"
+      SampleTime	      "0.01"
+      Port {
+	PortNumber		1
+      }
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step1"
+      SID		      "466"
+      Position		      [820, 110, 850, 140]
+      ZOrder		      315
+      Commented		      "on"
+      Time		      "0"
+      After		      "0"
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      Sum
       Name		      "Subtract"
       SID		      "448"
@@ -8816,6 +8929,7 @@ Model {
       Position		      [795, 85, 815, 105]
       ZOrder		      314
       ShowName		      off
+      Commented		      "on"
       IconShape		      "round"
       Inputs		      "|++"
       InputSameDT	      off
@@ -8850,6 +8964,42 @@ Model {
       Denominator	      "[1,0,-1]"
       SampleTime	      "0.01"
     }
+    Block {
+      BlockType		      Reference
+      Name		      "x setpoint"
+      SID		      "481"
+      Ports		      [0, 1]
+      Position		      [355, -40, 385, -10]
+      ZOrder		      318
+      LibraryVersion	      "1.441"
+      SourceBlock	      "simulink/Sources/Repeating\nSequence"
+      SourceType	      "Repeating table"
+      SourceProductName	      "Simulink"
+      SourceProductBaseCode   "SL"
+      ContentPreviewEnabled   on
+      rep_seq_t		      "[0 4.99 5 14.99 15 25]"
+      rep_seq_y		      "[0 0 1 1 0 0]"
+      Port {
+	PortNumber		1
+	Name			"x setpoint"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "y setpoint1"
+      SID		      "483"
+      Ports		      [0, 1]
+      Position		      [355, -100, 385, -70]
+      ZOrder		      319
+      LibraryVersion	      "1.441"
+      SourceBlock	      "simulink/Sources/Repeating\nSequence"
+      SourceType	      "Repeating table"
+      SourceProductName	      "Simulink"
+      SourceProductBaseCode   "SL"
+      ContentPreviewEnabled   on
+      rep_seq_t		      "[0 4.99 5 14.99 15 25]"
+      rep_seq_y		      "[0 0 1 1 0 0]"
+    }
     Line {
       Name		      "x velocity setpoint (u)"
       ZOrder		      105
@@ -8860,18 +9010,20 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "x (FOPD 1.3 gain)"
+      Name		      "square x (z=1, FOPD 1 gain)"
       ZOrder		      72
       Labels		      [2, 0]
-      SrcBlock		      "Subsystem2"
+      SrcBlock		      "OS4"
       SrcPort		      1
-      Points		      [9, 0; 0, 121; -599, 0; 0, -61]
+      Points		      [9, 0; 0, 121; -644, 0; 0, -61]
       DstBlock		      "Rate Transition"
       DstPort		      1
     }
     Line {
-      ZOrder		      74
-      SrcBlock		      "Step"
+      Name		      "x setpoint"
+      ZOrder		      116
+      Labels		      [2, 0]
+      SrcBlock		      "x setpoint"
       SrcPort		      1
       Points		      [20, 0]
       DstBlock		      "Subtract"
@@ -8927,8 +9079,8 @@ Model {
       ZOrder		      106
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [13, 0; 0, -10]
-      DstBlock		      "Subsystem2"
+      Points		      [15, 0]
+      DstBlock		      "OS4"
       DstPort		      1
     }
     Line {
@@ -8937,6 +9089,22 @@ Model {
       SrcPort		      1
       DstBlock		      "discrete IOPID"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      117
+      SrcBlock		      "y setpoint1"
+      SrcPort		      1
+      Points		      [460, 0; 0, 145]
+      DstBlock		      "OS4"
+      DstPort		      2
+    }
+    Line {
+      Name		      "ypos"
+      ZOrder		      118
+      Labels		      [1, 1]
+      SrcBlock		      "OS4"
+      SrcPort		      2
+      Points		      [62, 0]
     }
     Annotation {
       SID		      "480"
