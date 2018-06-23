@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1357"
+    ComputedModelVersion    "1.1358"
     NumModelReferences	    0
     NumTestPointedSignals   16
     TestPointedSignal {
@@ -31,7 +31,7 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      "square x (z=1, FOPD 1 gain)"
+      SignalName	      "square x (z=1, FOPD 0.7 gain)"
       FullBlockPath	      "systema/OS4"
       LogSignal		      1
       MaxPoints		      5000
@@ -327,9 +327,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 21 16:41:09 2018"
-  RTWModifiedTimeStamp	  451499345
-  ModelVersionFormat	  "1.%<AutoIncrement:1357>"
+  LastModifiedDate	  "Sat Jun 23 15:36:55 2018"
+  RTWModifiedTimeStamp	  451669010
+  ModelVersionFormat	  "1.%<AutoIncrement:1358>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -2125,6 +2125,7 @@ Model {
       SID		      "467"
       Position		      [790, 35, 840, 65]
       ZOrder		      316
+      Gain		      "0.7"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -2295,7 +2296,7 @@ Model {
       ContentPreviewEnabled   on
       Port {
 	PortNumber		1
-	Name			"square x (z=1, FOPD 1 gain)"
+	Name			"square x (z=1, FOPD 0.7 gain)"
 	PropagatedSignals	"xpos"
       }
       Port {
@@ -9133,7 +9134,7 @@ Model {
       xmax		      "1.5"
       ymin		      "-0.5"
       ymax		      "1.5"
-      st		      "-0.5"
+      st		      "0"
     }
     Block {
       BlockType		      DiscreteTransferFcn
@@ -9181,6 +9182,7 @@ Model {
       Port {
 	PortNumber		1
 	Name			"x setpoint"
+	DataLogging		on
       }
     }
     Block {
@@ -9201,6 +9203,7 @@ Model {
       Port {
 	PortNumber		1
 	Name			"y set"
+	DataLogging		on
       }
     }
     Line {
@@ -9213,7 +9216,7 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "square x (z=1, FOPD 1 gain)"
+      Name		      "square x (z=1, FOPD 0.7 gain)"
       ZOrder		      72
       SrcBlock		      "OS4"
       SrcPort		      1
