@@ -38,7 +38,7 @@
 function [sr]=irid_fod(r,Ts,norder)
 if nargin<3; norder=5; end
 if Ts < 0 , sprintf('%s','Sampling period has to be positive'),     return, end
-if abs(r)>=1, sprintf('%s','The fractional order should be less than 1.'), return, end
+%if abs(r)>=1, sprintf('%s','The fractional order should be less than 1.'), return, end
 if norder<2,       sprintf('%s','The order of the approximate transfer function has to be greater than 1'), return, end
 % 
 L=200; %number of points of the impulse response function h(n)
