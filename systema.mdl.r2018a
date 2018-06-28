@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1345"
+    ComputedModelVersion    "1.1346"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -207,7 +207,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [528.0, 120.0, 1357.0, 770.0]
+      Location		      [62.0, 90.0, 1357.0, 770.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -267,9 +267,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 28 12:53:26 2018"
-  RTWModifiedTimeStamp	  452091205
-  ModelVersionFormat	  "1.%<AutoIncrement:1345>"
+  LastModifiedDate	  "Thu Jun 28 14:25:46 2018"
+  RTWModifiedTimeStamp	  452096736
+  ModelVersionFormat	  "1.%<AutoIncrement:1346>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -1663,7 +1663,7 @@ Model {
   }
   System {
     Name		    "systema"
-    Location		    [528, 120, 1885, 890]
+    Location		    [62, 90, 1419, 860]
     Open		    on
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
@@ -1680,7 +1680,142 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "480"
+    SIDHighWatermark	    "481"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Dashboard Scope"
+      SID		      "481"
+      Ports		      []
+      Position		      [400, -115, 630, 50]
+      ZOrder		      318
+      ShowName		      off
+      DialogController	      "hmiCreateDDGDialog"
+      DialogControllerArgs    "DataTag0"
+      RequestExecContextInheritance off
+      MaskHideContents	      on
+      ContentPreviewEnabled   on
+      IsWebBlock	      on
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		22
+	$ClassName		"Simulink.Mask"
+	Type			"MWDashboardBlock"
+	Description		"SimulinkHMI:dialogs:HMIScopeDialogDesc"
+	Help			"helpview([docroot '/mapfiles/simulink.map'], 'hmi_scope')"
+	Display			"if strcmp(get_param(bdroot(gcb),'BlockDiagramType'), 'library')\n    image([(matlabroot) '/toolbox/simulin"
+	"k/hmi/icons/DashboardScope.png']);\nend"
+	IconFrame		"off"
+	RunInitForIconRedraw	"off"
+	IconUnits		"normalized"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  4
+	  Object {
+	    $ObjectID		    23
+	    Type		    "edit"
+	    Name		    "webBlockId"
+	    Prompt		    "WebBlock Id"
+	    Value		    "657a5043-1f61-4048-b1d6-f42bbd0a2826"
+	    Evaluate		    "off"
+	    Tunable		    "off"
+	    Internal		    "on"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "edit"
+	    Name		    "webBlockType"
+	    Prompt		    "WebBlock Type"
+	    Value		    "sdiscope"
+	    Evaluate		    "off"
+	    Tunable		    "off"
+	    Internal		    "on"
+	    ReadOnly		    "on"
+	    Enabled		    "off"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    25
+	    Type		    "checkbox"
+	    Name		    "ShowInitialText"
+	    Prompt		    ""
+	    Value		    "on"
+	    Evaluate		    "off"
+	    Tunable		    "off"
+	    Internal		    "on"
+	    Enabled		    "off"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    26
+	    Type		    "edit"
+	    Name		    "HMISrcModelName"
+	    Prompt		    "Source Model"
+	    Value		    "systema"
+	    Evaluate		    "off"
+	    Tunable		    "off"
+	    NeverSave		    "on"
+	    Internal		    "on"
+	    Visible		    "off"
+	  }
+	  PropName		  "Parameters"
+	}
+	Object {
+	  $PropName		  "DialogControls"
+	  $ObjectID		  27
+	  $ClassName		  "Simulink.dialog.Group"
+	  Prompt		  "Simulink:studio:ToolBarParametersMenu"
+	  Array {
+	    Type		    "Simulink.dialog.parameter.Control"
+	    Dimension		    4
+	    Object {
+	      $ObjectID		      28
+	      $ClassName	      "Simulink.dialog.parameter.Edit"
+	      PromptLocation	      "left"
+	      Name		      "webBlockId"
+	    }
+	    Object {
+	      $ObjectID		      29
+	      $ClassName	      "Simulink.dialog.parameter.Edit"
+	      PromptLocation	      "left"
+	      Name		      "webBlockType"
+	    }
+	    Object {
+	      $ObjectID		      30
+	      $ClassName	      "Simulink.dialog.parameter.CheckBox"
+	      Name		      "ShowInitialText"
+	    }
+	    Object {
+	      $ObjectID		      31
+	      $ClassName	      "Simulink.dialog.parameter.Edit"
+	      PromptLocation	      "left"
+	      Name		      "HMISrcModelName"
+	    }
+	    PropName		    "DialogControls"
+	  }
+	  Name			  "ParameterGroupVar"
+	}
+      }
+      System {
+	Name			"Dashboard Scope"
+	Location		[-1624, 293, -886, 829]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetDomainSpec		off
+	DomainSpecType		"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+      }
+    }
     Block {
       BlockType		      SubSystem
       Name		      "FOPD"
@@ -1732,7 +1867,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    22
+	    $ObjectID		    32
 	    $ClassName		    "Simulink.Mask"
 	    Initialization	    "wb=ww(1); wh=ww(2); G=zz(gam,n,wb,wh);\nnum=G.num{1}; den=G.den{1}; T=1/wh; str='Fractional\\"
 	    "n';\nif isnumeric(gam)\n	if gam>0, str=[str, 'Der  s^' num2str(gam) ];\n	else, str=[str, 'Int  s^{' num2str(gam) "
@@ -1742,21 +1877,21 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      3
 	      Object {
-		$ObjectID		23
+		$ObjectID		33
 		Type			"edit"
 		Name			"gam"
 		Prompt			"Derivative order gamma"
 		Value			"-Lambda"
 	      }
 	      Object {
-		$ObjectID		24
+		$ObjectID		34
 		Type			"edit"
 		Name			"ww"
 		Prompt			"Frequency range [wb,wh]"
 		Value			"[0.001,1000]"
 	      }
 	      Object {
-		$ObjectID		25
+		$ObjectID		35
 		Type			"edit"
 		Name			"n"
 		Prompt			"Apprixmation order"
@@ -2116,7 +2251,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"IOPID"
-	Location		[514, 148, 1871, 918]
+	Location		[528, 120, 1885, 890]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetDomainSpec		off
@@ -3456,7 +3591,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    26
+		    $ObjectID		    36
 		    $ClassName		    "Simulink.Mask"
 		    Display		    "disp('optsiminit')"
 		  }
@@ -8019,7 +8154,7 @@ Model {
 	      RequestExecContextInheritance off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		27
+		$ObjectID		37
 		$ClassName		"Simulink.Mask"
 		Display			"disp('optsiminit')"
 	      }
@@ -8962,6 +9097,14 @@ Model {
       VerticalAlignment	      "top"
       ZOrder		      -3
     }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    (     0         0    \"    %-$25-C;W!E"
   }
 }
 #Finite State Machines
