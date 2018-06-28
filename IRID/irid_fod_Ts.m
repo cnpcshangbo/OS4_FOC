@@ -35,7 +35,7 @@
 %
 % 9/5/2009 
 % 
-function [sr]=irid_fod(r,Ts,norder)
+function [sr]=irid_fod_Ts(r,Ts,norder)
 if nargin<3; norder=5; end
 if Ts < 0 , sprintf('%s','Sampling period has to be positive'),     return, end
 %if abs(r)>=1, sprintf('%s','The fractional order should be less than 1.'), return, end
@@ -45,7 +45,7 @@ L=200; %number of points of the impulse response function h(n)
 Taxis=[0:L-1]*Ts;r0=r;r=abs(r);
 ha0=(7*Ts/8)^r;n=1:L-1;h=[ha0, (Ts^r)*(n.^(r-1))/gamma(r)]; 
 [b,a]=prony(h,norder,norder);
-sr=tf(b,a,Ts);if r0>0, sr=1/sr; r=-r0; end
+sr=tf(b,a,Ts);if r0>0, sr=1/sr/Ts; r=-r0; end
 
 if 1  % change this to 0 if you do not want to see plots
 % approximated h()

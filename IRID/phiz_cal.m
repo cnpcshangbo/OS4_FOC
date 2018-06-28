@@ -1,7 +1,12 @@
-gam=0.9885-1;
+% Fractional order proportional derivative controller discretization
+% Contact: Bo Shang
+% cnpcshangbo@gmail.com
+%% Impulse response invariant discretization of fractional order
+%% integrators/differentiators
+gam=0.9885+1;
 Ts=.01;
-dfod=irid_fod(gam,Ts,5);
-
+dfod=irid_fod(gam,Ts,5); % Try this method
+%% FOPD
 kp=1.5489;
 ki=0.8829;
 s=tf('s');
