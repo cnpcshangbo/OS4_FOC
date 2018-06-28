@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1344"
+    ComputedModelVersion    "1.1345"
     NumModelReferences	    0
     NumTestPointedSignals   11
     TestPointedSignal {
@@ -183,10 +183,7 @@ Model {
   "s\" : 200,\n    \"signals\" : {\n    },\n    \"stages\" : [\n      {\n        \"conditions\" : [\n\n        ],\n    "
   "    \"operator\" : \"AND\"\n      }\n    ]\n  }\n}"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "22b4dcec-2de2-4551-8c2b-1b879a066b59,2dff3ba8-9017-47d1-a854-bbe1581afcad,bacc78a2-1bc4"
-  "-4af5-93a7-dbab7b2cbf53,6356761d-7bb1-489e-b09c-703983743281,1376cf80-7457-4b9a-bc0d-f89981e7c44d,9b0424c7-3b87-4cfb"
-  "-903e-32d73a2226e8,5aa4a4fa-4361-445e-9416-eaf520888258,d48e4e35-3c97-40cf-925c-5a9e1454e37b,85310526-9631-40b7-a567"
-  "-920beaacd1b7,18575289-90db-47a5-ad5c-692852348560,300649d1-9111-448d-912d-af5f2a47ce3c"
+  LogicAnalyzerSignalOrdering ""
   CustomCodeFunctionData  ""
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
@@ -270,9 +267,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lenovo"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jun 21 14:22:54 2018"
-  RTWModifiedTimeStamp	  451491764
-  ModelVersionFormat	  "1.%<AutoIncrement:1344>"
+  LastModifiedDate	  "Thu Jun 28 12:53:26 2018"
+  RTWModifiedTimeStamp	  452091205
+  ModelVersionFormat	  "1.%<AutoIncrement:1345>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -2109,7 +2106,7 @@ Model {
     }
     Block {
       BlockType		      SubSystem
-      Name		      "PID"
+      Name		      "IOPID"
       SID		      "468"
       Ports		      [1, 1]
       Position		      [615, 22, 650, 78]
@@ -2118,7 +2115,7 @@ Model {
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
       System {
-	Name			"PID"
+	Name			"IOPID"
 	Location		[514, 148, 1871, 918]
 	Open			off
 	PortBlocksUseCompactNotation off
@@ -8882,7 +8879,7 @@ Model {
       SrcBlock		      "FOPD"
       SrcPort		      1
       Points		      [16, 0; 0, -45]
-      DstBlock		      "PID"
+      DstBlock		      "IOPID"
       DstPort		      1
     }
     Line {
@@ -8933,7 +8930,7 @@ Model {
     }
     Line {
       ZOrder		      104
-      SrcBlock		      "PID"
+      SrcBlock		      "IOPID"
       SrcPort		      1
       DstBlock		      "discrete IOPID"
       DstPort		      1
