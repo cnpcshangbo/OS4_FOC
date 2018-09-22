@@ -22,7 +22,9 @@ Bo Shang, Yunzhou Zhang, Chengdong Wu, YangQuan Chen. Fractional Order Flight Co
 * Run the model;
 * Comment through the FOPD controller and comment out the IOPID controller;
 * Re-run the model;
-* Launch Simulation Data Inspector. Check the output to compare the curves.
+* Launch Simulation Data Inspector. Check the output to compare the curves;
+* Linear model step response is in the folder of IRID;
+* Linear model disturbance is also in the folder of IRID, but the git branch needs to be switched to "verify-impulse" first.
 
 ## References:
 Bouabdallah, Samir. "Design and control of quadrotors with application to autonomous flying." PhD Thesis(2007).
