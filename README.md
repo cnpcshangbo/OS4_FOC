@@ -7,9 +7,9 @@ This is a project aiming to get OS4 ready for testing fractional order controlle
 
 ## Citations:
 ```
-@inproceedings{bo2018fractionalos4,
+@inproceedings{shang2018fractional_os4_icarcv,
   title={Fractional Order Flight Control of Quadrotor UAS: an OS4 Benchmark Environment and a Case Study(accepted)},
-  author={Bo Shang and Yunzhou Zhang and Chengdong Wu and YangQuan Chen},
+  author={Shang, Bo and Zhang, Yunzhou and Wu, Chengdong and Chen, YangQuan},
   booktitle={International Conference on Control, Automation, Robotics and Vision (ICARCV)},
   year={2018},
   organization={IEEE}
