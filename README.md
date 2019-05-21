@@ -3,6 +3,9 @@
 
 This is a project aiming to get OS4 ready for testing fractional order controllers.
 
+# Note that 
+This work has been merged into: https://github.com/Fractional-order-controller/FOFC_Benchmark
+
 
 
 ## Citations:
